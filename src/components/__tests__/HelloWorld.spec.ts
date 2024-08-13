@@ -1,5 +1,5 @@
 import { render } from "@testing-library/vue";
-import HelloWorld from "@/components/HelloWorld.vue";
+import HelloWorld from "../HelloWorld.vue";
 
 describe("HelloWorld.vue", () => {
   it("renders a message", () => {
