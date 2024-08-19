@@ -22,8 +22,8 @@
             @click="togglePasswordVisibility"
             class="absolute inset-y-0 right-0 pr-3 flex items-center text-sage-500"
           >
-            <EyeIcon v-if="!showPassword" class="h-5 w-5" />
-            <EyeSlashIcon v-else class="h-5 w-5" />
+            <EyeSlashIcon v-if="showPassword" class="h-5 w-5" />
+            <EyeIcon v-else class="h-5 w-5" />
           </button>
         </div>
         <button
@@ -43,46 +43,38 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { useMainStore } from "../stores/main";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/24/outline";
 
-export default {
-  components: {
-    EyeIcon,
-    EyeSlashIcon,
-  },
+const email = ref("");
+const password = ref("");
+const showPassword = ref(false);
+const router = useRouter();
+const store = useMainStore();
 
-  setup() {
-    const email = ref("");
-    const password = ref("");
-    const showPassword = ref(false);
-    const router = useRouter();
-    const store = useMainStore();
-
-    const login = () => {
-      // Replace with actual authentication logic
-      if (email.value === "admin@example.com" && password.value === "admin") {
-        store.login("admin");
-        router.push("/admin");
-      } else if (
-        email.value === "learner@example.com" &&
-        password.value === "learner"
-      ) {
-        store.login("learner");
-        router.push("/learner");
-      } else {
-        alert("Invalid credentials");
-      }
-    };
-
-    const togglePasswordVisibility = () => {
-      showPassword.value = !showPassword.value;
-    };
-
-    return { email, password, showPassword, login, togglePasswordVisibility };
-  },
+const login = () => {
+  // Replace with actual authentication logic
+  if (email.value === "admin@example.com" && password.value === "admin") {
+    store.login("admin");
+    router.push("/admin");
+  } else if (
+    email.value === "learner@example.com" &&
+    password.value === "learner"
+  ) {
+    store.login("learner");
+    router.push("/learner");
+  } else {
+    alert("Invalid credentials");
+  }
 };
+
+const togglePasswordVisibility = () => {
+  showPassword.value = !showPassword.value;
+};
+
+// Register the components to avoid unused import error
+defineExpose({ EyeIcon, EyeSlashIcon });
 </script>

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import LearnerDashboard from "../views/LearnerDashboard.vue";
 import Login from "../views/Login.vue";
+// import LearnerDashboard from "../views/LearnerDashboard.vue";
 import { useMainStore } from "../stores/main";
 
 const routes = [
@@ -10,14 +10,14 @@ const routes = [
     name: "Home",
     component: Home,
   },
-  {
-    path: "/learner",
-    component: LearnerDashboard,
-    meta: { requiresAuth: true, roles: ["learner"] },
-  },
+  // {
+  //   path: "/learner",
+  //   component: LearnerDashboard,
+  //   meta: { requiresAuth: true, roles: ["learner"] },
+  // },
   {
     path: "/login",
-    name: "Test",
+    name: "Login",
     component: Login,
   },
 ];
