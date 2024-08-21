@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-sage-800 text-white w-full py-4 px-4 sm:px-6">
+  <nav class="bg-sage-800 text-white w-full py-2 px-4 sm:px-6">
     <div class="container mx-auto flex items-center justify-between">
       <NavbarLogo :logoSrc="logoSrc" />
       <NavbarMenu :links="links" menuClass="flex space-x-4" />
