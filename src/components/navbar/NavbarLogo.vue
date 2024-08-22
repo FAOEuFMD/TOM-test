@@ -1,10 +1,10 @@
 <template>
-  <div class="flex items-center">
-    <a class="navbar-item" href="/">
+  <div class="flex items-center ml-4">
+    <a href="/" class="block">
       <img
         :src="logoSrc"
-        alt="Logo"
-        class="logo w-24 h-auto sm:w-20 md:w-24 lg:w-28"
+        alt="EuFMD logo"
+        class="w-24 h-auto sm:w-20 md:w-24 lg:w-28"
       />
     </a>
   </div>

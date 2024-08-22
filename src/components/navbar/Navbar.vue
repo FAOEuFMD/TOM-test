@@ -1,9 +1,14 @@
 <template>
-  <nav class="bg-sage-800 text-white w-full py-2 px-4 sm:px-6">
-    <div class="container mx-auto flex items-center justify-between">
-      <NavbarLogo :logoSrc="logoSrc" />
-      <NavbarMenu :links="links" menuClass="flex space-x-4" />
+  <nav class="bg-primary-800 text-white w-full pt-2">
+    <div class="flex items-center">
+      <router-link to="/">
+        <NavbarLogo :logoSrc="logoSrc" />
+      </router-link>
     </div>
+    <NavbarMenu
+      :links="links"
+      menuClass="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-7 bg-secondary-500"
+    />
   </nav>
 </template>
 
@@ -19,13 +24,13 @@ export default defineComponent({
     NavbarLogo,
     NavbarMenu,
   },
+
   data() {
     return {
       logoSrc,
       links: [
         { name: "Welcome", href: "/" },
         { name: "Self-assessment", href: "/self-assessment" },
-        { name: "Login", href: "/login" },
       ],
     };
   },
