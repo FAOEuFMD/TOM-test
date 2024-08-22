@@ -6,30 +6,43 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        sage: {
+        primary: {
           50: "#f2f7f5",
           100: "#e6efeb",
           200: "#c0d7cd",
           300: "#9abfaf",
           400: "#74a791",
-          500: "#69927f", // Your base color
+          500: "#69927f", // base color
           600: "#5e8372",
           700: "#4e6d5f",
           800: "#3e574c",
           900: "#2e413a",
         },
-        gray: {
-          50: "#f7f7f7",
-          100: "#e3e3e3",
-          200: "#c8c8c8",
-          300: "#a4a4a4",
-          400: "#818181",
-          500: "#666666",
-          600: "#515151",
-          700: "#434343",
-          800: "#333333", // Your base color
-          900: "#242424",
-          950: "#1a1a1a",
+        secondary: {
+          50: "#f2f7f5",
+          100: "#e6efeb",
+          200: "#cddfd7",
+          300: "#b4cfc3",
+          400: "#9bbfaf",
+          500: "#69927f", // base color
+          600: "#5e8372",
+          700: "#4e6d5f",
+          800: "#3e574c",
+          900: "#2e413a",
+          950: "#1f2d28",
+        },
+        accent: {
+          50: "#E6F7F2",
+          100: "#CCEFE5",
+          200: "#99DFC9",
+          300: "#66CFAE",
+          400: "#33BF93",
+          500: "#065F46", // base color
+          600: "#054E3A",
+          700: "#043C2D",
+          800: "#032B21",
+          900: "#021A14",
+          950: "#010D0A",
         },
         // Complementary colors
         coral: {
@@ -52,40 +65,39 @@ module.exports = {
           fontWeight: theme("fontWeight.bold"),
           lineHeight: theme("lineHeight.tight"),
           marginBottom: theme("spacing.4"),
-          color: theme("colors.gray.900"),
+          color: theme("colors.secondary.900"),
         },
         ".h2": {
           fontSize: theme("fontSize.3xl"),
           fontWeight: theme("fontWeight.semibold"),
           lineHeight: theme("lineHeight.snug"),
           marginBottom: theme("spacing.3"),
-          color: theme("colors.gray.800"),
+          color: theme("colors.secondary.800"),
         },
         ".h3": {
           fontSize: theme("fontSize.2xl"),
           fontWeight: theme("fontWeight.medium"),
           lineHeight: theme("lineHeight.snug"),
           marginBottom: theme("spacing.2"),
-          color: theme("colors.gray.800"),
+          color: theme("colors.secondary.800"),
         },
         ".h4": {
           fontSize: theme("fontSize.xl"),
           fontWeight: theme("fontWeight.medium"),
           lineHeight: theme("lineHeight.snug"),
           marginBottom: theme("spacing.2"),
-          color: theme("colors.gray.700"),
+          color: theme("colors.secondary.700"),
         },
         ".subheader": {
           fontSize: theme("fontSize.lg"),
           fontWeight: theme("fontWeight.normal"),
           lineHeight: theme("lineHeight.relaxed"),
           marginBottom: theme("spacing.4"),
-          color: theme("colors.gray.600"),
+          color: theme("colors.secondary.600"),
         },
       };
 
       addComponents(headers);
     }),
   ],
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
 };
