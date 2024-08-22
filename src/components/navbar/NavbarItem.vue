@@ -1,8 +1,8 @@
 <template>
-  <li class="navbar-item">
-    <a :href="link.href" class="text-white hover:text-gray-400">
+  <li class="mx-4">
+    <router-link :to="link.href" class="text-white hover:text-secondary-400">
       {{ link.name }}
-    </a>
+    </router-link>
   </li>
 </template>
 
@@ -20,8 +20,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-.navbar-item {
-  margin: 0 1rem;
-}
-</style>
+<style scoped></style>
