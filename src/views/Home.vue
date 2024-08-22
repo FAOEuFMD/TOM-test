@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1 class="h1 text-sage-600">Welcome to TOM</h1>
+    <h1 class="h1 text-primary-600">Welcome to TOM</h1>
     <p class="subheader">
       A training management system for veterinary professionals by the EuFMD.
     </p>
