@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center flex-grow bg-sage-100">
+  <div class="flex items-center justify-center flex-grow bg-primary-100">
     <div class="w-full max-w-xl p-8 bg-white rounded-lg shadow-md">
       <form @submit.prevent="login" class="space-y-4">
         <input
@@ -7,7 +7,7 @@
           type="email"
           placeholder="Email"
           required
-          class="w-full px-3 py-2 bg-sage-50 border border-sage-200 rounded-md focus:outline-none focus:ring-2 focus:ring-sage-300 text-gray-700"
+          class="w-full px-3 py-2 bg-primary-50 border border-primary-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-300 text-secondary-700"
         />
         <div class="relative">
           <input
@@ -15,12 +15,12 @@
             :type="showPassword ? 'text' : 'password'"
             placeholder="Password"
             required
-            class="w-full px-3 py-2 bg-sage-50 border border-sage-200 rounded-md focus:outline-none focus:ring-2 focus:ring-sage-300 text-gray-700"
+            class="w-full px-3 py-2 bg-primary-50 border border-primary-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-300 text-secondary-700"
           />
           <button
             type="button"
             @click="togglePasswordVisibility"
-            class="absolute inset-y-0 right-0 pr-3 flex items-center text-sage-500"
+            class="absolute inset-y-0 right-0 pr-3 flex items-center text-primary-500"
           >
             <EyeSlashIcon v-if="showPassword" class="h-5 w-5" />
             <EyeIcon v-else class="h-5 w-5" />
@@ -28,13 +28,15 @@
         </div>
         <button
           type="submit"
-          class="w-full py-2 px-4 bg-sage-600 text-white rounded-md hover:bg-sage-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sage-500"
+          class="w-full py-2 px-4 bg-primary-600 text-white rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
         >
           Log in
         </button>
       </form>
       <div class="mt-4 text-center space-y-2">
-        <a href="#" class="text-sage-600 hover:underline">Forgot password?</a>
+        <a href="#" class="text-primary-600 hover:underline"
+          >Forgot password?</a
+        >
         <div>
           <a href="#" class="text-red-600 hover:underline">Create account</a>
         </div>
