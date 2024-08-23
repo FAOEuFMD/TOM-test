@@ -29,8 +29,8 @@ export default defineComponent({
     return {
       logoSrc,
       links: [
-        { name: "Welcome", href: "/" },
-        { name: "Self-assessment", href: "/self-assessment" },
+        { name: "welcome", href: "/" },
+        { name: "self_assessment", href: "/self-assessment" },
       ],
     };
   },
