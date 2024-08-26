@@ -1,10 +1,9 @@
-src/components/navbar/LocaleSwitcher.vue
 <template>
-  <div class="w-full relative inline-block hover:bg-accent-500">
+  <div class="w-full h-full relative inline-block hover:bg-accent-500">
     <select
       v-model="selectedLocale"
       @change="updateLocale"
-      class="w-full text-center bg-primary-500 hover:bg-accent-500 px-4 py-4 text-xl text-gray-100 appearance-none focus:outline-none leading-tight transition duration-300 ease-in-out cursor-pointer"
+      class="w-full h-full text-center bg-primary-500 hover:bg-accent-500 px-4 py-4 text-xl text-gray-100 appearance-none focus:outline-none leading-tight transition duration-300 ease-in-out cursor-pointer"
     >
       <option v-for="locale in locales" :key="locale.code" :value="locale.code">
         {{ $t(`${locale.name}`) }}

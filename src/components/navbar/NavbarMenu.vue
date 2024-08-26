@@ -19,7 +19,7 @@
         {{ $t("navbar_links.login_register") }}
       </router-link>
     </li>
-    <li>
+    <li class="flex items-center justify-center">
       <LocaleSwitcher></LocaleSwitcher>
     </li>
   </ul>
