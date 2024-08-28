@@ -1,6 +1,6 @@
 <template>
   <div
-    class="content-container mx-auto max-w-7xl px-4 mt-12 md:mt-16 lg:mt-24 xl:mt-32 h-full"
+    class="content-container h-full mx-auto max-w-7xl md:max-w-5xl px-4 mt-12 md:mt-16 lg:mt-24 xl:mt-16 pb-4 md:pb-8 lg:pb-12"
   >
     <h1 class="h1">Welcome to TOM</h1>
     <p class="subheader">
