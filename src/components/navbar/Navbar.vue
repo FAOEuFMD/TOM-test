@@ -10,12 +10,14 @@
       menuClass="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-7 bg-secondary-500"
     />
   </nav>
+  <Header />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import NavbarLogo from "../navbar/NavbarLogo.vue";
 import NavbarMenu from "../navbar/NavbarMenu.vue";
+import Header from "../Header.vue";
 import logoSrc from "@/assets/images/EuFMD_logo_white.png";
 
 export default defineComponent({
@@ -23,6 +25,7 @@ export default defineComponent({
   components: {
     NavbarLogo,
     NavbarMenu,
+    Header,
   },
 
   data() {

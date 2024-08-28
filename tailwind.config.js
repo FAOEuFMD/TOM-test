@@ -44,15 +44,11 @@ module.exports = {
           900: "#021A14",
           950: "#010D0A",
         },
-        // Complementary colors
-        coral: {
-          500: "#ff7f50",
-        },
-        sand: {
-          500: "#f4a460",
-        },
-        sky: {
-          500: "#87ceeb",
+        // Text colors
+        gray: {
+          400: "#2D2D2D",
+          500: "#1A1A1A", // Base color
+          600: "#141414",
         },
       },
     },
@@ -65,10 +61,10 @@ module.exports = {
           fontWeight: theme("fontWeight.bold"),
           lineHeight: theme("lineHeight.tight"),
           marginBottom: theme("spacing.4"),
-          color: theme("colors.secondary.900"),
+          color: theme("colors.secondary.800"),
           "&::selection": {
-            backgroundColor: "#ADD8E6", // Light blue background color
-            color: "#333333", // Dark grey text color
+            backgroundColor: "#ADD8E6",
+            color: "#333333",
           },
         },
         ".h2": {
@@ -76,7 +72,7 @@ module.exports = {
           fontWeight: theme("fontWeight.semibold"),
           lineHeight: theme("lineHeight.snug"),
           marginBottom: theme("spacing.3"),
-          color: theme("colors.secondary.800"),
+          color: theme("colors.gray.500"),
           "&::selection": {
             backgroundColor: "#FFB7B7",
             color: "#333333",
@@ -87,7 +83,7 @@ module.exports = {
           fontWeight: theme("fontWeight.medium"),
           lineHeight: theme("lineHeight.snug"),
           marginBottom: theme("spacing.2"),
-          color: theme("colors.secondary.800"),
+          color: theme("colors.gray.500"),
           "&::selection": {
             backgroundColor: "#ADD8E6",
             color: "#333333",
@@ -98,7 +94,7 @@ module.exports = {
           fontWeight: theme("fontWeight.medium"),
           lineHeight: theme("lineHeight.snug"),
           marginBottom: theme("spacing.2"),
-          color: theme("colors.secondary.700"),
+          color: theme("colors.gray.500"),
           "&::selection": {
             backgroundColor: "#ADD8E6",
             color: "#333333",
@@ -109,7 +105,7 @@ module.exports = {
           fontWeight: theme("fontWeight.normal"),
           lineHeight: theme("lineHeight.relaxed"),
           marginBottom: theme("spacing.4"),
-          color: theme("colors.secondary.600"),
+          color: theme("colors.gray.500"),
           "&::selection": {
             backgroundColor: "#ADD8E6",
             color: "#333333",
@@ -118,6 +114,25 @@ module.exports = {
       };
 
       addComponents(headers);
+    }),
+    plugin(function ({ addBase }) {
+      addBase({
+        body: {
+          margin: "0",
+          padding: "0",
+        },
+        "h1, h2, h3, h4, p": {
+          marginTop: "1rem",
+          marginBottom: "1rem",
+        },
+        "h1, h2, h3, h4, p": {
+          marginLeft: "1rem",
+          marginRight: "1rem",
+        },
+        ".bottom-spacing": {
+          paddingBottom: "2rem", // Use the custom spacing utility
+        },
+      });
     }),
   ],
 };
