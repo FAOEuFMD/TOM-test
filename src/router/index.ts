@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
+import SelfAssessment from "../views/SelfAssessment.vue";
+
 // import LearnerDashboard from "../views/LearnerDashboard.vue";
 import { useMainStore } from "../stores/main";
 
@@ -19,6 +21,11 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login,
+  },
+  {
+    path: "/self-assessment",
+    name: "SelfAssessment",
+    component: SelfAssessment,
   },
 ];
 
