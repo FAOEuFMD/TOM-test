@@ -66,6 +66,10 @@ module.exports = {
           lineHeight: theme("lineHeight.tight"),
           marginBottom: theme("spacing.4"),
           color: theme("colors.secondary.900"),
+          "&::selection": {
+            backgroundColor: "#ADD8E6", // Light blue background color
+            color: "#333333", // Dark grey text color
+          },
         },
         ".h2": {
           fontSize: theme("fontSize.3xl"),
@@ -73,6 +77,10 @@ module.exports = {
           lineHeight: theme("lineHeight.snug"),
           marginBottom: theme("spacing.3"),
           color: theme("colors.secondary.800"),
+          "&::selection": {
+            backgroundColor: "#FFB7B7",
+            color: "#333333",
+          },
         },
         ".h3": {
           fontSize: theme("fontSize.2xl"),
@@ -80,6 +88,10 @@ module.exports = {
           lineHeight: theme("lineHeight.snug"),
           marginBottom: theme("spacing.2"),
           color: theme("colors.secondary.800"),
+          "&::selection": {
+            backgroundColor: "#ADD8E6",
+            color: "#333333",
+          },
         },
         ".h4": {
           fontSize: theme("fontSize.xl"),
@@ -87,6 +99,10 @@ module.exports = {
           lineHeight: theme("lineHeight.snug"),
           marginBottom: theme("spacing.2"),
           color: theme("colors.secondary.700"),
+          "&::selection": {
+            backgroundColor: "#ADD8E6",
+            color: "#333333",
+          },
         },
         ".subheader": {
           fontSize: theme("fontSize.lg"),
@@ -94,6 +110,10 @@ module.exports = {
           lineHeight: theme("lineHeight.relaxed"),
           marginBottom: theme("spacing.4"),
           color: theme("colors.secondary.600"),
+          "&::selection": {
+            backgroundColor: "#ADD8E6",
+            color: "#333333",
+          },
         },
       };
 
