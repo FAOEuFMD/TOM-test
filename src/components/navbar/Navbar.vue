@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-primary-800 text-white w-full pt-2">
+  <nav class="bg-primary-800 text-white w-full">
     <div class="flex items-center">
       <router-link to="/">
         <NavbarLogo :logoSrc="logoSrc" />
