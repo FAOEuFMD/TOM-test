@@ -3,12 +3,16 @@
 <template>
   <div class="app-container">
     <Navbar />
-    <router-view></router-view>
+    <div class="content">
+      <router-view></router-view>
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script setup lang="ts">
 import Navbar from "@/components/navbar/Navbar.vue";
+import Footer from "@/components/footer/Footer.vue";
 </script>
 
 <style>
@@ -38,8 +42,12 @@ body {
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  min-height: 100vh;
   background-color: #f5f5f5;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
 }
 </style>

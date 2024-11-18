@@ -1,6 +1,6 @@
 <template>
   <li class="mx-4">
-    <router-link :to="link.href" class="text-white hover:text-secondary-400">
+    <router-link :to="link.href" class="text-white">
       {{ link.name }}
     </router-link>
   </li>
