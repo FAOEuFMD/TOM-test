@@ -9,40 +9,46 @@ export interface Locale {
 export const supportedLocales: Locale[] = [
   {
     code: "en",
-    name: "english",
+    name: "English",
     dir: "ltr",
     country: "United States",
     countryCode: "US",
   },
   {
     code: "es",
-    name: "español",
+    name: "Castellano",
     dir: "ltr",
     country: "Spain",
     countryCode: "ES",
   },
   {
     code: "it",
-    name: "italiano",
+    name: "Italiano",
     dir: "ltr",
     country: "Italy",
     countryCode: "IT",
   },
   {
     code: "ru",
-    name: "pусский",
+    name: "Русский",
     dir: "ltr",
     country: "Russia",
     countryCode: "RU",
   },
   {
-    code: "sr",
-    name: "cрпски",
+    code: "srb",
+    name: "сербский",
     dir: "ltr",
     country: "Serbia",
     countryCode: "RS",
   },
-  // Add more languages as needed
+  {
+    code: "bg",
+    name: "Български",
+    dir: "ltr",
+    country: "Bulgaria",
+    countryCode: "BG",
+  },
 ];
 
 export function getSupportedLocales(): Locale[] {

@@ -1,13 +1,27 @@
 {
-  "english": "English",
-  "italiano": "Italiano",
-  "español": "Español",
-  "pусский": "Pусский",
-  "cрпски": "Cрпски",
   "navbar_links": {
     "welcome": "Welcome",
-    "login_register": "Login / Register",
+    "login_register": "Login/Register",
     "self_assessment": "Self-assessment"
+  },
+  "welcome": {
+    "header": "Welcome to TOM",
+    "description": "TOM is a training management system that enables countries to oversee the individual training and development of their veterinary professionals and enhance veterinary capacity. It serves as a competency framework, offering recognition to veterinarians, and operates as a web-based tool for monitoring training completion within veterinary services."
+  },
+  "account": {
+    "email": "Email",
+    "password": "Password",
+    "login": "Log in",
+    "forgotPassword": "Forgot password?",
+    "createAccount": "Create account",
+    "viewAccount": "View Account",
+    "logOut": "Log Out",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "updatePassword": "Update Password",
+    "updating": "Updating...",
+    "timeout": "You have been logged out due to inactivity for 15 minutes."
   },
   "routes": {
     "login": "Login",

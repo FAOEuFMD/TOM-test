@@ -1,11 +1,11 @@
 <template>
-  <div class="flex items-center justify-center flex-grow bg-primary-100">
+  <div class="flex items-center justify-center flex-grow bg-primary-100 p-16">
     <div class="w-full max-w-xl p-8 bg-white rounded-lg shadow-md">
       <form @submit.prevent="login" class="space-y-4">
         <input
           v-model="email"
           type="email"
-          placeholder="Email"
+          :placeholder="$t('account.email')"
           required
           class="w-full px-3 py-2 bg-primary-50 border border-primary-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-300 text-secondary-700"
         />
@@ -13,7 +13,7 @@
           <input
             v-model="password"
             :type="showPassword ? 'text' : 'password'"
-            placeholder="Password"
+            :placeholder="$t('account.password')"
             required
             class="w-full px-3 py-2 bg-primary-50 border border-primary-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-300 text-secondary-700"
           />
@@ -30,15 +30,17 @@
           type="submit"
           class="w-full py-2 px-4 bg-primary-600 text-white rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
         >
-          Log in
+          {{ $t("account.login") }}
         </button>
       </form>
       <div class="mt-4 text-center space-y-2">
-        <a href="#" class="text-primary-600 hover:underline"
-          >Forgot password?</a
-        >
+        <a href="#" class="text-primary-600 hover:underline">{{
+          $t("account.forgotPassword")
+        }}</a>
         <div>
-          <a href="#" class="text-red-600 hover:underline">Create account</a>
+          <a href="#" class="text-red-600 hover:underline">{{
+            $t("account.createAccount")
+          }}</a>
         </div>
       </div>
     </div>
@@ -77,6 +79,5 @@ const togglePasswordVisibility = () => {
   showPassword.value = !showPassword.value;
 };
 
-// Register the components to avoid unused import error
 defineExpose({ EyeIcon, EyeSlashIcon });
 </script>

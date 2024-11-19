@@ -6,7 +6,7 @@
       class="w-full h-full text-center bg-primary-500 hover:bg-accent-500 px-4 py-4 text-xl text-gray-100 appearance-none focus:outline-none leading-tight transition duration-300 ease-in-out cursor-pointer"
     >
       <option v-for="locale in locales" :key="locale.code" :value="locale.code">
-        {{ $t(`${locale.name}`) }}
+        {{ locale.name }}
       </option>
     </select>
     <div
@@ -40,7 +40,6 @@ export default defineComponent({
   methods: {
     updateLocale() {
       this.$i18n.locale = this.selectedLocale;
-      // Additional logic for changing locale if needed
     },
   },
 });
