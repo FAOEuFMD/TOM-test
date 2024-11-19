@@ -1,31 +1,27 @@
 {
-  "english": "English",
-  "italiano": "Italiano",
-  "español": "Español",
-  "pусский": "Pусский",
-  "cрпски": "Cрпски",
   "navbar_links": {
     "welcome": "Добродошли",
-    "login_register": "Логин / Регистер",
-    "self_assessment": "Samoprocena"
+    "login_register": "Пријава/Регистрација",
+    "self_assessment": "Самопроцена"
   },
-  "routes": {
-    "login": "Prijavljivanje",
-    "password_reset": "PasswordReset",
-    "courses": "Kursevi",
-    "nominee": "Kandidat",
-    "request course": "Kurs zahteva",
-    "training credit system": "Kreditni sistem obuke",
-    "suggestions": "Predloge",
-    "future features": "Buduće funkcije",
-    "single learner": "Jednoumni učenik",
-    "competency framework": "Okvir kompetencije",
-    "custom report": "Prilagođeni izveštaj",
-    "add user data": "Dodavanje korisničkih podataka",
-    "adjust levels": "Podesi nivoe",
-    "admin_login": "Prijavljivanje administratora",
-    "admin": "Administratorskog",
-    "learner profile": "Profil učenika"
+  "welcome": {
+    "header": "Добродошли у TOM",
+    "description": "TOM је систем за управљање обуком који омогућава земљама да прате обуку и индивидуални развој својих ветеринарских професионалаца и побољшавају ветеринарске капацитете. Служи као оквир компетенција, нудећи признање ветеринарима, и функционише као веб-алатка за праћење завршетка обуке у оквиру ветеринарских услуга."
+  },
+  "account": {
+    "email": "Е-пошта",
+    "password": "Лозинка",
+    "login": "Пријава",
+    "forgotPassword": "Заборавили сте лозинку?",
+    "createAccount": "Направите налог",
+    "viewAccount": "Погледај налог",
+    "logOut": "Одјави се",
+    "currentPassword": "Тренутна лозинка",
+    "newPassword": "Нова лозинка",
+    "confirmNewPassword": "Потврди нову лозинку",
+    "updatePassword": "Ажурирај лозинку",
+    "updating": "Ažuriranje...",
+    "timeout": "Bili ste odjavljeni nakon 15 minuta neaktivnosti."
   },
   "sidebar": {
     "home": "Kuжi",
@@ -40,58 +36,72 @@
     "future_features": "Buduće funkcije",
     "leave_a_suggestion": "Ostavite predlog"
   },
-  "cm_home": {
-    "welcome": "Добродошли",
+  "cmHome": {
+    "welcome": "Početna",
     "overview": "Pregled",
-    "map": "Prikaži mapu zemlje",
-    "coming_soon": "Uskoro stižem",
+    "all_categories": "Sve kategorije",
+    "select_category": "Izaberite kategoriju da filtrirate grafike ispod.",
+    "select_course": "Sada izaberite kurs da filtrirate grafike ispod.",
+    "select_country": "Izaberite zemlju",
+    "bundle": "Paket",
+    "country": "Zemlja",
+    "level": "Nivo",
+    "all_courses": "Svi kursevi",
+    "add_program": "Dodajte program",
+    "competency": "Kompetencija",
+    "map": "Pogledajte mapu zemlje",
+    "disclaimer": "Granice i nazivi prikazani na ovoj mapi, kao i oznake koje se koriste, ne impliciraju izražavanje bilo kakvog mišljenja od strane FAO o pravnom statusu bilo koje zemlje, teritorije, grada ili područja ili njenih vlasti, niti o delimitaciji njenih granica. Tačkaste ili isprekidane linije na mapama predstavljaju približne granice za koje možda još uvek nema potpunog dogovora.",
+    "coming_soon": "Uskoro",
     "learners_registered": "Registrovani učenici",
     "learners": "Učenici",
-    "participants_courses_status": "Status kurseva polaznika",
-    "tailored_courses": "Skrojeni kursevi ",
+    "participants_courses_status": "Status kurseva učesnika",
+    "tailored_courses": "Nacionalni kursevi FEPC",
     "real_time_participants": "Učesnici obuke u realnom vremenu",
     "workshop_participants": "Učesnici radionice",
-    "online_course_participants": "Online polaznici kursa",
-    "training_credit_system": "Kreditni sistem obuke",
-    "completed": "Dovršeno",
-    "in_progress": "U toku",
-    "request_a_tailored_course": "Zatražite skrojeni kurs",
-    "average_number_of_courses_per_participant": "Prosečan broj kurseva po polaznicima",
-    "compentencies": "Ovlašćenja",
-    "select": "Izaberite",
-    "select_a_position_to_see_competencies_related_to_this_role": "Izaberite poziciju da biste videli kompetencije vezane za ovu ulogu",
-    "select_position": "Izaberi poziciju",
-    "select_level": "Izaberi nivo",
-    "select_region": "Izbor regiona",
+    "online_course_participants": "Učesnici online kurseva",
+    "courses_by_status_filter": "Kursevi po statusu",
+    "courses_by_role_filter": "Završeni kursevi po ulozi",
+    "courses_by_year_filter": "Završeni kursevi po godini",
+    "training_credit_system": "Sistem kredita za obuku",
+    "completed": "Završeno",
+    "open": "U toku",
+    "request_a_tailored_course": "Zahtev",
+    "average_number_of_courses_per_participant": "Prosečan broj kurseva po učesniku",
+    "compentencies": "Kompetencije",
+    "Select": "Izaberi",
+    "select_a_position_to_see_competencies_related_to this_role": "Izaberite poziciju da vidite kompetencije povezane sa ovom ulogom",
+    "select_position": "Izaberite poziciju",
+    "select_level": "Izaberite nivo",
+    "select_region": "Izaberite region",
     "select_competency": "Izaberite kompetenciju",
     "assign_level": "Dodeli nivo",
-    "learners_in_total": "Ukupno učenici: ",
+    "learners_in_total": "Učenika ukupno: ",
     "learners_with_this_position": "Učenici sa ovom pozicijom: ",
     "overview_of_required_competencies": "Pregled potrebnih kompetencija",
-    "select_a_position_above_to_see_the_competency_levels_of_learners": "Izaberite gorenavedeni položaj da biste videli nivoe kompetentnosti učenika na toj poziciji.",
+    "select_a_position_above_to_see_the_competency_levels_of_learners": "Izaberite poziciju iznad da vidite nivoe kompetencija učenika na toj poziciji.",
     "competency_details": "Detalji o kompetenciji",
-    "learn_more_about_the_competency_framework": "Saznajte više o okviru kompetencije",
-    "select_a_position_to_see_competency_details": "Izaberite gorenavedeni položaj da biste videli detalje o kompetencijama za tu poziciju.",
-    "number_of_learners_per_competency": "Broj učenika po kompetencijama",
-    "click_to_view_more_details_chart_on_the_right": "Kliknite na kompetenciju da biste videli više detalja. Grafikon sa desne strane.",
+    "learn_more_about_the_competency_framework": "Saznajte više o okviru kompetencija",
+    "select_a_position_to_see_competency_details": "Izaberite poziciju iznad da vidite detalje o kompetenciji za tu poziciju.",
+    "number_of_learners_per_competency": "Broj učenika po kompetenciji",
+    "click_to_view_more_details_chart_on_the_right": "Kliknite na kompetenciju da biste videli više detalja. Grafikon desno.",
     "you_are_seeing_data_for": "Vidite podatke za",
-    "epidemiology_explained": "Epidemiologija je proučavanje faktora koji određuju i utiču na učestalost i distribuciju bolesti ili drugih događaja vezanih za zdravlje i njihove uzroke u definisanoj populaciji u cilju kontrole njihovog razvoja i širenja i uspostavljanja programa za sprečavanje razvoja i širenja.",
-    "tads_explained": "TADS su bolesti koje su veoma zarazne ili prenosive i imaju potencijal za veoma brzo širenje, bez obzira na nacionalne granice. Profilisanje bolesti se odnosi na Kliničke znake, etiologiju, patogenezu, klinički kurs, prenosni potencijal, epidemiologiju bolesti. Kontrola i prevencija nalaze se u nadležnosti kontrole i prevencije bolesti. MEĐU TAD-ovima su afrička svinjska groznica, visoko patogeni ptičiji grip, zarazna bovina pleuropneumonija, hemoragična septikaemija, grip A, rinderpest, groznica doline procepa , bliskoistočni respiratorni sindrom koronavirusa i bolesti stopala i usta."
+    "Epidemiology_explained": "Epidemiologija je proučavanje faktora koji određuju i utiču na učestalost i raspodelu bolesti ili drugih zdravstvenih događaja i njihovih uzroka u definisanoj populaciji, u cilju kontrole njihovog razvoja i širenja i uspostavljanja programa za sprečavanje razvoja i širenja.",
+    "TADS_explained": "TADS su bolesti koje su veoma zarazne ili prenosive i imaju potencijal za vrlo brzo širenje, bez obzira na nacionalne granice. Profilisanje bolesti se odnosi na kliničke znakove, etiologiju, patogenezu, klinički tok, potencijal prenosa i epidemiologiju bolesti. Kontrola i prevencija su deo kompetencije kontrole i prevencije bolesti. TAD uključuju afričku svinjsku groznicu, visoko patogenu ptičju influencu, kontagioznu pleuropneumoniju goveda, hemoragičnu septikemiju, influencu A, kugu goveda, groznicu Rift doline, koronavirus sindroma respiratornog sistema Bliskog Istoka i bolest stopala i usta."
   },
-  "epidemiology": {
+  "Epidemiology": {
     "definition": "Epidemiologija je proučavanje faktora koji određuju i utiču na učestalost i distribuciju bolesti ili drugih događaja vezanih za zdravlje i njihove uzroke u definisanoj populaciji u cilju kontrole njihovog razvoja i širenja i uspostavljanja programa za sprečavanje razvoja i širenja."
   },
-  "transboundary_animal_diseases": {
+  "Transboundary Animal Diseases": {
     "definition": "TADS su bolesti koje su veoma zarazne ili prenosive i imaju potencijal za veoma brzo širenje, bez obzira na nacionalne granice. Profilisanje bolesti se odnosi na Kliničke znake, etiologiju, patogenezu, klinički kurs, prenosni potencijal, epidemiologiju bolesti. Kontrola i prevencija nalaze se u nadležnosti kontrole i prevencije bolesti. MEĐU TAD-ovima su afrička svinjska groznica, visoko patogeni ptičiji grip, zarazna bovina pleuropneumonija, hemoragična septikaemija, grip A, rinderpest, groznica doline procepa , bliskoistočni respiratorni sindrom koronavirusa i bolesti stopala i usta."
   },
-  "user_data": {
+  "userData": {
     "single_user": "Jedan korisnik",
     "bulk_user_upload": "Masovno otpremanje korisnika",
     "add_a_single_user": "Dodavanje jednog korisnika",
     "first_name": "Ime",
     "last_name": "Prezime",
     "email": "E-pošta",
-    "region": "Regiona",
+    "select_region": "Izaberite region",
     "optional": "Opcionalno",
     "select_position": "Izaberi poziciju",
     "csv_upload_template": "Evo predloška za format . CSV otpremanje datoteke",
@@ -102,7 +112,7 @@
     "adjust_levels": "Podesi nivo",
     "click_to_save": "Kliknite da biste sačuvali rezultate"
   },
-  "adjust_competency": {
+  "adjustCompetency": {
     "position_competencies": "Pozicione kompetencije ",
     "position": "Poziciju",
     "competency": "Kompetencija",
@@ -121,6 +131,7 @@
     "enrol_learner": "Upisuj učenike",
     "mark_complete": "Označi kao dovršeno",
     "enrolled_course_completion": "upisani % završetka kursa",
+    "completed_assessments": "Završene ocene",
     "no_region": "Bez regiona",
     "list_of_positions": "Lista pozicija",
     "levels": "Nivoa",
@@ -164,7 +175,7 @@
     "add_current_region": "Dodavanje trenutnog regiona",
     "enter_region": "Ovde unesite region"
   },
-  "course_list": {
+  "courseList": {
     "instructions": "Potražite kurs. Ako se vaš kurs ne pojavi na listi, imaćete mogućnost da dodate novi kurs.",
     "placeholder": "Tražite kurs...",
     "first": "Prvi",
@@ -174,7 +185,7 @@
     "no_courses": "Još uvek niste dodali nijedan kurs.",
     "page": "Stranica"
   },
-  "single_learner": {
+  "singleLearner": {
     "competencies": "Ovlašćenja",
     "courses": "Kursevi",
     "self_assessment": "Samoprocena",
@@ -185,7 +196,9 @@
     "no_completed_courses": "Nemaš završene kurseve",
     "get_prepared": "Pripremi se",
     "behaviour": "Ponaљanje",
-    "pcp": "PCP"
+    "pcp": "PCP",
+    "completed": "Završeno",
+    "in_progress": "U toku"
   },
   "login": {
     "username": "E-pošta",
@@ -193,7 +206,18 @@
     "login": "Prijaviti se",
     "forgot_password": "Zaboravili ste lozinku?"
   },
-  "self_assessment": {
+  "signUp": {
+    "create_account": "Kreiraj nalog",
+    "disclaimer": "Ako se registrujete u TOM, moći ćete: da sačuvate rezultat svoje samoprocenjivanja, da pristupite personalizovanim predlozima za kurseve, da upravljate svim sertifikatima kurseva na jednom mestu, da podelite svoj profil sa veterinarskom vlasti vaše zemlje koja vas može kontaktirati u slučaju potrebe (ako već imaju pristup TOM-u).",
+    "first_name": "Ime",
+    "last_name": "Prezime",
+    "email": "E-pošta",
+    "select_country": "Izaberite zemlju",
+    "existing_account": "Ako imate postojeći nalog na eufmdlearning.works, molimo vas da se registrujete koristeći istu adresu e-pošte",
+    "button": "Registruj se",
+    "error_msg": "Корисник са овом имејл адресом већ постоји."
+  },
+  "selfAssessment": {
     "section_1": "ODELJAK 1",
     "section_2": "ODELJAK 2",
     "section_3": "ODELJAK 3",
@@ -227,13 +251,13 @@
     "tads_2_8": "Svestan sam tereta prekograničnih bolesti životinja na nacionalnom nivou, uključujući i društveno-ekonomski uticaj.",
     "disease_prev_3_1": "Svestan sam principa prekogranične kontrole bolesti životinja i njihovih kontrolnih programa.",
     "disease_prev_3_2": "Svesna sam koje bolesti životinja zahtevaju obavezno obaveštavanje i značaj \"sistema za rano otkrivanje\", uključujući i to kako pristupiti relativnim informacijama o bolestima i kako reagovati na njih.",
-    "disease_prev_3_3": "U mogućnosti sam da učestvujem u planovima kontrole bolesti (npr. nadzor, kampanje vakcinacije, praćenje post vakcina, programi testiranja i kulta/lečenja).",
+    "disease_prev_3_3": "U mogućnosti sam da uestvujem u planovima kontrole bolesti (npr. nadzor, kampanje vakcinacije, praćenje post vakcina, programi testiranja i kulta/lečenja).",
     "disease_prev_3_4": "U stanju sam da vodim planove za kontrolu bolesti, uključujući koordinaciju sa partnerima za njihovo efikasno sprovođenje.",
     "disease_prev_3_5": "Mogu da nadgledam javno-privatna partnerstva na lokalnom nivou (uključujući vođenje tima, akreditaciju, reviziju).",
     "disease_prev_3_6": "U mogućnosti sam da vodim druge u sprovođenju programa u složenim situacijama i prilagođavam procedure na osnovu potreba odgovora.",
     "disease_prev_3_7": "U stanju sam da razvijem javno-privatna partnerstva na lokalnom nivou.",
     "disease_prev_3_8": "Mogu da pišem programe kontrole bolesti na osnovu najboljih praksi i procenim njihovu isplatiost.",
-    "disease_prev_3_9": "U stanju sam da razvijam javno-privatna partnerstva na nacionalnom nivou.",
+    "disease_prev_3_9": "U stanju sam da razvijem javno-privatna partnerstva na nacionalnom nivou.",
     "bio_security_4_1": "Svestan sam mera biosigurnosti na farmi i mogu da identifikujem sredine u kojima je potrebna biosigurnost.",
     "bio_security_4_2": "Svestan sam uticaja narušavanja biosigurnosti i relativnih mera ublažavanja.",
     "bio_security_4_3": "U stanju sam da efikasno učestvujem u epidemiji bolesti kao član tima za bioekurnost, uključujući ulazak i ostavljanje prostorija na biosekuren način.",
@@ -264,7 +288,7 @@
     "emergency_disaster_mgt_7_1": "Svestan sam zakona koji reguliše reagovanje u vanrednim situacijama, ulogu veterinara u vanrednim situacijama i koordinaciju između vladinih i nevladinih organizacija, vlasti i javnih i privatnih subjekata.",
     "emergency_disaster_mgt_7_2": "Pod pristiglim vođstvom mogu da učestvujem u hitnom odgovoru.",
     "emergency_disaster_mgt_7_3": "Mogu da primenim koncept mehanizama koordinacije incidenata, njihov funkcionalni kapacitet i ulogu veterinara, tokom incidenta.",
-    "emergency_disaster_mgt_7_4": "Mogu da usmerim druge tokom hitnih sluиaja.",
+    "emergency_disaster_mgt_7_4": "Mogu da usmerim druge tokom hitnih slučajevima.",
     "emergency_disaster_mgt_7_5": "Mogu efikasno da komuniciram krize na lokalnom nivou.",
     "emergency_disaster_mgt_7_6": "Mogu da koordiniram složene incidente i identifikujem različite sektore koji su umešani.",
     "emergency_disaster_mgt_7_7": "Mogu da režiram kompleksan incident na lokalnom nivou.",
@@ -328,17 +352,18 @@
     "safety_13_5": "Mogu da prepoznam znake pogoršanja blagostanja kod drugih (mentalna prva pomoć) i da intervenišem.",
     "safety_13_6": "U stanju sam da preduzmem korektivne radnje kako bih ispravio uslove rada koji vode u nebezbedno radno okruženje.",
     "safety_13_7": "Mogu da vodim istragu o nesreжama ili blizu promaљaja.",
-    "safety_13_8": "Mogu da dam preporuke da se smanji verovatnoća opasnosti po mentalno ili fizičko zdravlje.",
+    "safety_13_8": "Mogu da dam preporuke da se smanji verovatnoću opasnosti po mentalno ili fizičko zdravlje.",
     "safety_13_9": "Mogu da pišem/ažuriram smernice i procedure za zaštitu bezbednosti, zdravlja i dobrobiti zaposlenih.",
     "rank_level": "Rangirajte nivo na kojem se slažete sa sledećim izjavama.",
     "survey_sections": "Odeljci ankete",
     "welcome": "Dobrodošli u TOM Samoprocenu",
-    "welcome_description_1": "This assessment allows you to automatically estimate your proficiency in competencies related to the prevention, response, and control of <bold>FMD and similar transboundary animal</bold> diseases.",
-    "welcome_list_item_1": "1. Begin by selecting the area (competency) you want to be assessed in. Then, answer a corresponding series of questions.",
-    "welcome_list_item_2": "2. TOM will provide you with feedback on your expected level of proficiency.",
-    "welcome_list_item_3": "3. You can save your scores by creating a new profile in TOM. This profile will allow you <bold>access to course recommendations based on your results </bold> and share your profile with the veterinary authority in your country, who may contact you if needed.",
-    "guest_welcome_description_2": "To start your assessment, please select your country to tailor the available competencies to your specific region.",
-    "guest_welcome_description_3": "The TOM self-assessment is currently being piloted, and we welcome your feedback at {email}.",
+    "welcome_description_1": "Ova procena vam omogućava da automatski procenite svoju kompetenciju u veštinama vezanim za prevenciju, odgovor i kontrolu <bold>afričke svinjske groznice i sličnih prekograničnih bolesti životinja</bold>.",
+    "welcome_description_2": "S leva, videćete listu kompetencija dostupnih za ocenu na osnovu zemlje koju ste odabrali.",
+    "welcome_list_item_1": "1. Počnite tako što ćete odabrati oblast (kompetenciju) koju želite da ocenite. Zatim odgovorite na odgovarajuću seriju pitanja.",
+    "welcome_list_item_2": "2. TOM će vam pružiti povratne informacije o vašem očekivanom nivou kompetencije.",
+    "welcome_list_item_3": "3. Možete sačuvati svoje rezultate kreiranjem novog profila u TOM-u. Ovaj profil će vam omogućiti <bold>pristup preporukama kurseva na osnovu vaših rezultata</bold> i deljenje vašeg profila sa veterinarskom vlasti vaše zemlje, koja vas može kontaktirati ako bude potrebno.",
+    "guest_welcome_description_2": "Da biste započeli svoju procenu, molimo vas da odaberete svoju zemlju kako biste prilagodili dostupne kompetencije vašem specifičnom regionu.",
+    "guest_welcome_description_3": "Samoprocenjivanje TOM-a trenutno je u fazi pilotiranja, i dobrodošli su vaši komentari na {email}.",
     "click_survey_section": "Kliknite na bilo koji od odeljaka ankete na bočnoj tabli da biste počeli.",
     "thank_you_for_completing": "Hvala vam što ste završili TOM Samoprocenu!",
     "assessment_submit": "Prosleđivanje",
@@ -352,10 +377,33 @@
     "select_default_text": "Изаберите земљу",
     "submit_button_text": "submit"
   },
+  "routes": {
+    "welcome": "Добродошли",
+    "Login": "Prijavljivanje",
+    "loginRegister": "Логин / Регистер",
+    "PasswordReset": "PasswordReset",
+    "Courses": "Kursevi",
+    "Nominee": "Kandidat",
+    "Request Course": "Kurs zahteva",
+    "Training Credit System": "Kreditni sistem obuke",
+    "Suggestions": "Predloge",
+    "Future Features": "Buduće funkcije",
+    "Single Learner": "Jednoumni učenik",
+    "Competency Framework": "Okvir kompetencije",
+    "Custom Report": "Prilagođeni izveštaj",
+    "Add User Data": "Dodavanje korisničkih podataka",
+    "Adjust Levels": "Podesi nivoe",
+    "admin_login": "Prijavljivanje administratora",
+    "Admin": "Administratorskog",
+    "Learner Profile": "Profil učenika"
+  },
   "positions": {
     "central_vet": "Centralni veterinar",
     "regional_vet": "Regionalni veterinar",
-    "senior_vet": "Виши теренски veterinar"
+    "senior_vet": "Viši veterinar",
+    "expert_vet": "Veterinarski stručnjak",
+    "paraprofessional_vet": "Veterinarski paraprofesionalacл",
+    "lab_staff": "Laboratorijsko osoblje"
   },
   "competencies": {
     "epidemiology": "Epidemiologija",
@@ -372,12 +420,12 @@
     "risk_analysis": "Primena analize rizika",
     "safety_health": "Bezbednost, zdravlje i dobrobit"
   },
-  "comp_levels": {
-    "awareness": "Svest",
-    "beginner": "Početna",
-    "competent": "Kompetentan",
-    "proficient": "Vešt",
-    "expert": "Ekspert"
+  "compLevels": {
+    "Awareness": "Svest",
+    "Beginner": "Početna",
+    "Competent": "Kompetentan",
+    "Proficient": "Vešt",
+    "Expert": "Ekspert"
   },
   "certificates": {
     "name": "Ime",
@@ -390,7 +438,7 @@
     "certs": "Certifikate",
     "upload": "Otpremanje novog certifikata"
   },
-  "externalcourses": {
+  "externalCourses": {
     "external_courses": "Spoljni kursevi",
     "org": "Organizacija",
     "contact": "Kontakt osoba",

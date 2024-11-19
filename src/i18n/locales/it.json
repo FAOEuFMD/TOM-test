@@ -1,31 +1,27 @@
 {
-  "english": "English",
-  "italiano": "Italiano",
-  "español": "Español",
-  "pусский": "Pусский",
-  "cрпски": "Cрпски",
   "navbar_links": {
-    "welcome": "Benvenuto",
-    "login_register": "Accedi / Registrati",
-    "self_assessment": "Autoevaluación"
+    "welcome": "Benvenuti",
+    "login_register": "Accedi/Registrati",
+    "self_assessment": "Auto-valutazione"
   },
-  "routes": {
-    "login": "Accesso",
-    "password_reset": "PasswordReset",
-    "courses": "Corsi",
-    "nominee": "Nominato",
-    "request_course": "Richiesta di corso",
-    "training_credit_system": "Sistema di crediti formativi",
-    "suggestions": "Suggerimenti",
-    "future_features": "Caratteristiche future",
-    "single_learner": "Studente singolo",
-    "competency_framework": "Quadro delle competenze",
-    "custom_report": "Rapporto personalizzato",
-    "add_user_data": "Aggiungi dati utente",
-    "adjust_levels": "Regola i livelli",
-    "admin_login": "Accesso amministratore",
-    "admin": "Admin",
-    "learner_profile": "Profilo dell'allievo"
+  "welcome": {
+    "header": "Benvenuti in TOM",
+    "description": "TOM è un sistema di gestione della formazione che consente ai paesi di monitorare la formazione e lo sviluppo individuale dei loro professionisti veterinari e di migliorare la capacità veterinaria. Serve come quadro di competenze, offrendo riconoscimento ai veterinari, e funziona come uno strumento basato sul web per monitorare il completamento della formazione all'interno dei servizi veterinari."
+  },
+  "account": {
+    "email": "Email",
+    "password": "Password",
+    "login": "Accedi",
+    "forgotPassword": "Password dimenticata?",
+    "createAccount": "Crea account",
+    "viewAccount": "Visualizza account",
+    "logOut": "Esci",
+    "currentPassword": "Password attuale",
+    "newPassword": "Nuova password",
+    "confirmNewPassword": "Conferma nuova password",
+    "updatePassword": "Aggiorna password",
+    "updating": "Aggiornamento in corso...",
+    "timeout": "Sei stato disconnesso dopo 15 minuti di inattività."
   },
   "sidebar": {
     "home": "Casa",
@@ -40,56 +36,72 @@
     "future_features": "Caratteristiche future",
     "leave_a_suggestion": "Lascia un suggerimento"
   },
-  "cmhome": {
-    "welcome": "Benvenuto",
+  "cmHome": {
+    "welcome": "Home",
     "overview": "Panoramica",
+    "all_categories": "Tutte le categorie",
+    "select_category": "Seleziona una categoria per filtrare i grafici sottostanti.",
+    "select_course": "Ora seleziona un corso per filtrare i grafici sottostanti.",
+    "select_country": "Seleziona paese",
+    "bundle": "Pacchetto",
+    "country": "Paese",
+    "level": "Livello",
+    "all_courses": "Tutti i corsi",
+    "add_program": "Aggiungi un programma",
+    "competency": "Competenza",
     "map": "Visualizza la mappa del paese",
-    "coming_soon": "Prossimamente",
-    "learners_registered": "Studenti registrati",
-    "learners": "Studenti",
+    "disclaimer": "Le frontiere e i nomi mostrati e le designazioni utilizzate su questa mappa non implicano l'espressione di alcuna opinione da parte della FAO riguardo allo stato legale di qualsiasi paese, territorio, città o area o delle sue autorità, né riguardo alla delimitazione delle sue frontiere e confini. Le linee tratteggiate o a tratteggio sulle mappe rappresentano linee di confine approssimative per le quali potrebbe non esserci ancora un accordo completo.",
+    "coming_soon": "In arrivo",
+    "learners_registered": "Apprendisti registrati",
+    "learners": "Apprendisti",
     "participants_courses_status": "Stato dei corsi dei partecipanti",
-    "tailored_courses": "Corsi su misura",
+    "tailored_courses": "Corsi nazionali FEPC",
     "real_time_participants": "Partecipanti alla formazione in tempo reale",
     "workshop_participants": "Partecipanti al workshop",
-    "online_course_participants": "Partecipanti al corso online",
+    "online_course_participants": "Partecipanti ai corsi online",
+    "courses_by_status_filter": "Corsi per stato",
+    "courses_by_role_filter": "Corsi completati per ruolo",
+    "courses_by_year_filter": "Corsi completati per anno",
+    "training_credit_system": "Sistema di crediti per la formazione",
     "completed": "Completato",
-    "in_progress": "In corso",
+    "open": "In corso",
+    "request_a_tailored_course": "Richiesta",
     "average_number_of_courses_per_participant": "Numero medio di corsi per partecipante",
     "compentencies": "Competenze",
-    "select": "Selezionare",
-    "select_a_position_to_see_competencies_related_to_this_role": "Selezionare una posizione per vedere le competenze relative a questo ruolo",
-    "select_position": "Seleziona la posizione",
-    "select_level": "Selezionare il livello",
-    "select_region": "Selezionare la regione",
-    "select_competency": "Selezionare la competenza",
-    "assign_level": "Assegnazione del livello",
-    "learners_in_total": "Studenti in totale: ",
-    "learners_with_this_position": "Studenti con questa posizione: ",
+    "Select": "Seleziona",
+    "select_a_position_to_see_competencies_related_to this_role": "Seleziona una posizione per vedere le competenze relative a questo ruolo",
+    "select_position": "Seleziona posizione",
+    "select_level": "Seleziona livello",
+    "select_region": "Seleziona regione",
+    "select_competency": "Seleziona competenza",
+    "assign_level": "Assegna livello",
+    "learners_in_total": "Apprendisti in totale: ",
+    "learners_with_this_position": "Apprendisti con questa posizione: ",
     "overview_of_required_competencies": "Panoramica delle competenze richieste",
-    "select_a_position_above_to_see_the_competency_levels_of_learners": "Selezionare una posizione in alto per vedere i livelli di competenza dei discenti in quella posizione.",
+    "select_a_position_above_to_see_the_competency_levels_of_learners": "Seleziona una posizione sopra per vedere i livelli di competenza degli apprendisti in quella posizione.",
     "competency_details": "Dettagli sulla competenza",
-    "learn_more_about_the_competency_framework": "Per saperne di più sul quadro delle competenze",
-    "select_a_position_to_see_competency_details": "Selezionate una posizione in alto per vedere i dettagli delle competenze per quella posizione.",
-    "number_of_learners_per_competency": "Numero di studenti per competenza",
-    "click_to_view_more_details_chart_on_the_right": "Fare clic su una competenza per visualizzare ulteriori dettagli. Grafico a destra.",
-    "you_are_seeing_data_for": "Vengono visualizzati i dati per",
-    "epidemiology_explained": "L'epidemiologia è lo studio dei fattori che determinano e influenzano la frequenza e la distribuzione delle malattie o di altri eventi correlati alla salute e le loro cause in una popolazione definita, allo scopo di controllarne lo sviluppo e la diffusione e di stabilire programmi per prevenire lo sviluppo e la diffusione.",
-    "tads_explained": "Le TADS sono malattie altamente contagiose o trasmissibili e con un potenziale di diffusione molto rapido, indipendentemente dai confini nazionali. Il profilo della malattia si riferisce ai segni clinici, all'eziologia, alla patogenesi, al decorso clinico, al potenziale di trasmissione e all'epidemiologia della malattia. Il controllo e la prevenzione rientrano nelle competenze del controllo e della prevenzione delle malattie. Le DAT comprendono la peste suina africana, l'influenza aviaria ad alta patogenicità, la pleuropolmonite contagiosa bovina, la setticemia emorragica, l'influenza A, la peste bovina, la febbre della valle del fiume, il coronavirus della sindrome respiratoria del Medio Oriente e l'afta epizootica."
+    "learn_more_about_the_competency_framework": "Scopri di più sul framework delle competenze",
+    "select_a_position_to_see_competency_details": "Seleziona una posizione sopra per vedere i dettagli delle competenze per quella posizione.",
+    "number_of_learners_per_competency": "Numero di apprendisti per competenza",
+    "click_to_view_more_details_chart_on_the_right": "Clicca su una competenza per visualizzare ulteriori dettagli. Grafico a destra.",
+    "you_are_seeing_data_for": "Stai visualizzando dati per",
+    "Epidemiology_explained": "L'epidemiologia è lo studio dei fattori che determinano e influenzano la frequenza e la distribuzione delle malattie o di altri eventi sanitari e le loro cause in una popolazione definita, al fine di controllarne lo sviluppo e la diffusione e di stabilire programmi per prevenire lo sviluppo e la diffusione.",
+    "TADS_explained": "Le TADS sono malattie altamente contagiose o trasmissibili e hanno il potenziale per una diffusione molto rapida, indipendentemente dalle frontiere nazionali. Il profilo della malattia si riferisce ai segni clinici, all'eziologia, alla patogenesi, al decorso clinico, al potenziale di trasmissione e all'epidemiologia della malattia. Il controllo e la prevenzione rientrano nella competenza del controllo e della prevenzione delle malattie. Le TAD includono la peste suina africana, l'influenza aviaria altamente patogena, la pleuropneumonia contagiosa bovina, la setticemia emorragica, l'influenza A, la peste bovina, la febbre della valle del Rift, la sindrome respiratoria del Medio Oriente da coronavirus e la febbre aftosa."
   },
-  "epidemiology": {
+  "Epidemiology": {
     "definition": "L'epidemiologia è lo studio dei fattori che determinano e influenzano la frequenza e la distribuzione delle malattie o di altri eventi correlati alla salute e le loro cause in una popolazione definita, allo scopo di controllarne lo sviluppo e la diffusione e di stabilire programmi per prevenire lo sviluppo e la diffusione."
   },
-  "transboundary_animal_diseases": {
+  "Transboundary Animal Diseases": {
     "definition": "Le TADS sono malattie altamente contagiose o trasmissibili e con un potenziale di diffusione molto rapido, indipendentemente dai confini nazionali. Il profilo della malattia si riferisce ai segni clinici, all'eziologia, alla patogenesi, al decorso clinico, al potenziale di trasmissione e all'epidemiologia della malattia. Il controllo e la prevenzione rientrano nelle competenze del controllo e della prevenzione delle malattie. Le DAT comprendono la peste suina africana, l'influenza aviaria ad alta patogenicità, la pleuropolmonite contagiosa bovina, la setticemia emorragica, l'influenza A, la peste bovina, la febbre della valle del fiume, il coronavirus della sindrome respiratoria del Medio Oriente e l'afta epizootica."
   },
-  "user_data": {
+  "userData": {
     "single_user": "Utente singolo",
     "bulk_user_upload": "Caricamento massivo degli utenti",
     "add_a_single_user": "Aggiungere un singolo utente",
     "first_name": "Nome",
     "last_name": "Cognome",
     "email": "Email",
-    "region": "Regione",
+    "select_region": "Seleziona regione",
     "optional": "Opzionale",
     "select_position": "Seleziona la posizione",
     "csv_upload_template": "Ecco un modello per il formato del file di caricamento .CSV",
@@ -100,7 +112,7 @@
     "adjust_levels": "Regolazione del livello",
     "click_to_save": "Fare clic su Salva risultati"
   },
-  "adjust_competency": {
+  "adjustCompetency": {
     "position_competencies": "Competenze della posizione ",
     "position": "Posizione",
     "competency": "Competenza",
@@ -119,6 +131,7 @@
     "enrol_learner": "Iscrivere gli studenti",
     "mark_complete": "Segna Completa",
     "enrolled_course_completion": "iscritti completamento corso %",
+    "completed_assessments": "Valutazioni completate",
     "no_region": "Nessuna regione",
     "list_of_positions": "Elenco delle posizioni",
     "levels": "Livelli",
@@ -162,7 +175,7 @@
     "add_current_region": "Aggiungete la vostra regione attuale",
     "enter_region": "Inserire qui la regione"
   },
-  "courselist": {
+  "courseList": {
     "instructions": "Cercare il proprio corso. Se il corso non compare nell'elenco, è possibile aggiungere un nuovo corso.",
     "placeholder": "Cercare un corso...",
     "first": "Primo",
@@ -172,7 +185,7 @@
     "no_courses": "Non hai ancora aggiunto alcun corso.",
     "page": "Pagina"
   },
-  "singlelearner": {
+  "singleLearner": {
     "competencies": "Competenze",
     "courses": "Corsi",
     "self_assessment": "Autovalutazione",
@@ -183,7 +196,9 @@
     "no_completed_courses": "Non avete corsi completati",
     "get_prepared": "Preparatevi",
     "behaviour": "Comportamento",
-    "pcp": "PCP"
+    "pcp": "PCP",
+    "completed": "Completato",
+    "in_progress": "In corso"
   },
   "login": {
     "username": "Email",
@@ -191,7 +206,18 @@
     "login": "Accedi",
     "forgot_password": "Hai dimenticato la password?"
   },
-  "selfassessment": {
+  "signUp": {
+    "create_account": "Crea account",
+    "disclaimer": "Se ti registri in TOM, potrai: salvare il punteggio della tua autovalutazione, accedere a suggerimenti personalizzati per i corsi, gestire tutti i certificati dei corsi in un unico posto, condividere il tuo profilo con l'autorità veterinaria del tuo paese che potrebbe contattarti in caso di necessità (nel caso in cui abbiano già accesso a TOM).",
+    "first_name": "Nome",
+    "last_name": "Cognome",
+    "email": "Email",
+    "select_country": "Seleziona paese",
+    "existing_account": "Se hai un account esistente su eufmdlearning.works, ti preghiamo di registrarti utilizzando lo stesso indirizzo email",
+    "button": "Iscriviti",
+    "error_msg": "Un utente con questa email esiste già."
+  },
+  "selfAssessment": {
     "section_1": "SEZIONE 1",
     "section_2": "SEZIONE 2",
     "section_3": "SEZIONE 3",
@@ -330,12 +356,14 @@
     "safety_13_9": "Sono in grado di scrivere/aggiornare politiche e procedure per proteggere la sicurezza, la salute e il benessere dei dipendenti.",
     "rank_level": "Si prega di classificare il livello di accordo con le seguenti affermazioni.",
     "survey_sections": "Sezioni del sondaggio",
-    "welcome_description_1": "This assessment allows you to automatically estimate your proficiency in competencies related to the prevention, response, and control of <bold>FMD and similar transboundary animal</bold> diseases.",
-    "welcome_list_item_1": "1. Begin by selecting the area (competency) you want to be assessed in. Then, answer a corresponding series of questions.",
-    "welcome_list_item_2": "2. TOM will provide you with feedback on your expected level of proficiency.",
-    "welcome_list_item_3": "3. You can save your scores by creating a new profile in TOM. This profile will allow you <bold>access to course recommendations based on your results </bold> and share your profile with the veterinary authority in your country, who may contact you if needed.",
-    "guest_welcome_description_2": "To start your assessment, please select your country to tailor the available competencies to your specific region.",
-    "guest_welcome_description_3": "The TOM self-assessment is currently being piloted, and we welcome your feedback at {email}.",
+    "welcome": "Benvenuti all'autovalutazione TOM.",
+    "welcome_description_1": "Questa valutazione ti consente di stimare automaticamente la tua competenza nelle abilità relative alla prevenzione, risposta e controllo delle <bold>malattie trasmissibili degli animali, come la febbre aftosa</bold>.",
+    "welcome_description_2": "A sinistra, vedrai un elenco di competenze disponibili per la valutazione in base al paese che hai selezionato.",
+    "welcome_list_item_1": "1. Inizia selezionando l'area (competenza) in cui desideri essere valutato. Quindi, rispondi a una serie di domande corrispondenti.",
+    "welcome_list_item_2": "2. TOM ti fornirà un feedback sul tuo livello di competenza previsto.",
+    "welcome_list_item_3": "3. Puoi salvare i tuoi punteggi creando un nuovo profilo in TOM. Questo profilo ti permetterà di <bold>accedere a raccomandazioni sui corsi basate sui tuoi risultati</bold> e di condividere il tuo profilo con l'autorità veterinaria del tuo paese, che potrebbe contattarti se necessario.",
+    "guest_welcome_description_2": "Per iniziare la tua valutazione, seleziona il tuo paese per adattare le competenze disponibili alla tua regione specifica.",
+    "guest_welcome_description_3": "La valutazione autonoma di TOM è attualmente in fase di prova e accogliamo il tuo feedback a {email}.",
     "click_survey_section": "Cliccate su una qualsiasi delle sezioni del sondaggio nel pannello laterale per iniziare.",
     "thank_you_for_completing": "Grazie per aver completato l'Autovalutazione TOM!",
     "assessment_submit": "Invia",
@@ -349,10 +377,33 @@
     "select_default_text": "Seleziona un Paese",
     "submit_button_text": "Submit"
   },
+  "routes": {
+    "welcome": "Benvenuto",
+    "Login": "Accesso",
+    "loginRegister": "Accedi / Registrati",
+    "PasswordReset": "PasswordReset",
+    "Courses": "Corsi",
+    "Nominee": "Nominato",
+    "Request Course": "Richiesta di corso",
+    "Training Credit System": "Sistema di crediti formativi",
+    "Suggestions": "Suggerimenti",
+    "Future Features": "Caratteristiche future",
+    "Single Learner": "Studente singolo",
+    "Competency Framework": "Quadro delle competenze",
+    "Custom Report": "Rapporto personalizzato",
+    "Add User Data": "Aggiungi dati utente",
+    "Adjust Levels": "Regola i livelli",
+    "admin_login": "Accesso amministratore",
+    "Admin": "Admin",
+    "Learner Profile": "Profilo dell'allievo"
+  },
   "positions": {
     "central_vet": "Veterinario centrale",
     "regional_vet": "Veterinario regionale",
-    "senior_vet": "Veterinario di campo senior"
+    "senior_vet": "Veterinario di campo senior",
+    "expert_vet": "Esperto veterinario",
+    "paraprofessional_vet": "Paraprofessionista Veterinario",
+    "lab_staff": "Personale di laboratorio"
   },
   "competencies": {
     "epidemiology": "Epidemiologia",
@@ -369,12 +420,12 @@
     "risk_analysis": "Applicazione dell'analisi del rischio",
     "safety_health": "Sicurezza, salute e benessere"
   },
-  "comp_levels": {
-    "awareness": "Consapevolezza",
-    "beginner": "Principiante",
-    "competent": "Competente",
-    "proficient": "Competente",
-    "expert": "Esperto"
+  "compLevels": {
+    "Awareness": "Consapevolezza",
+    "Beginner": "Principiante",
+    "Competent": "Competente",
+    "Proficient": "Competente",
+    "Expert": "Esperto"
   },
   "certificates": {
     "name": "Nome",
@@ -387,7 +438,7 @@
     "certs": "Certificati",
     "upload": "Caricare un nuovo certificato"
   },
-  "external_courses": {
+  "externalCourses": {
     "external_courses": "Corsi esterni",
     "org": "Organizzazione",
     "contact": "Persona di contatto",
