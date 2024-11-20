@@ -1,0 +1,115 @@
+{
+  "user": {
+    "id": 123,
+    "email": "string",
+    "fullName": "string",
+    "position": "string",
+    "password": "string",
+    "country": "string",
+    "region": "string",
+    "role": "string",
+    "registrationDate": "timestamp",
+    "lastLogin": "timestamp",
+    "lastLogout": "timestamp",
+    "privacyPolicyAccepted": false,
+    "competencyFrameworks": ["global", "countrySpecific"],
+    "competencies": {
+      "global": [
+        {
+          "animalWelfare": {
+            "currentLevel": "none",
+            "requiredLevel": "expert",
+            "enrolledCategories": 0
+          },
+          "biosecurity": {
+            "currentLevel": "none",
+            "requiredLevel": "competent",
+            "enrolledCategories": 0
+          },
+          "dpcp": {
+            "currentLevel": "awareness",
+            "requiredLevel": "expert",
+            "enrolledCategories": 2
+          },
+          "emergencyPreparedness": {
+            "currentLevel": "none",
+            "requiredLevel": "proficient",
+            "enrolledCategories": 0
+          },
+          "emergencyResponse": {
+            "currentLevel": "none",
+            "requiredLevel": "awareness",
+            "enrolledCategories": 0
+          }
+        }
+      ],
+      "countrySpecific": [
+        {
+          "epidemiology": {
+            "currentLevel": "awareness",
+            "requiredLevel": "proficient",
+            "enrolledCategories": 1
+          },
+          "biosecurity": {
+            "currentLevel": "none",
+            "requiredLevel": "beginner",
+            "enrolledCategories": 0
+          },
+          "dpcp": {
+            "currentLevel": "awareness",
+            "requiredLevel": "expert",
+            "enrolledCategories": 0
+          }
+        }
+      ]
+    },
+    "courses": [
+      {
+        "name": "string",
+        "progress": 100,
+        "status": "complete",
+        "yearCompleted": 2019
+      },
+      {
+        "name": "string",
+        "progress": 100,
+        "status": "complete",
+        "yearCompleted": 2020
+      },
+      {
+        "name": "string",
+        "progress": 50,
+        "status": "inProgress",
+        "yearCompleted": 2019
+      }
+    ],
+    "selfAssessment": {
+      "scores": [
+        {
+          "competency": "epidemiology",
+          "level": "awareness"
+        },
+        {
+          "competency": "dcdp",
+          "level": "beginner"
+        },
+        {
+          "competency": "biosecurity",
+          "level": "expert"
+        }
+      ]
+    },
+    "certificates": [
+      {
+        "name": "string",
+        "file": "fileURL",
+        "dateUploaded": "timestamp"
+      },
+      {
+        "name": "string",
+        "file": "fileURL",
+        "dateUploaded": "timestamp"
+      }
+    ]
+  }
+}

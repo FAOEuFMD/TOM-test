@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Welcome from "../views/Welcome.vue";
 import Login from "../views/Login.vue";
+import Admin from "../views/Admin.vue";
 import SelfAssessment from "../views/SelfAssessment.vue";
-
-// import LearnerDashboard from "../views/LearnerDashboard.vue";
+import LearnerDashboard from "../views/LearnerDashboard.vue";
 import { useMainStore } from "../stores/main";
 
 const routes = [
@@ -12,11 +12,6 @@ const routes = [
     name: "Welcome",
     component: Welcome,
   },
-  // {
-  //   path: "/learner",
-  //   component: LearnerDashboard,
-  //   meta: { requiresAuth: true, roles: ["learner"] },
-  // },
   {
     path: "/login",
     name: "Login",
@@ -27,6 +22,17 @@ const routes = [
     name: "SelfAssessment",
     component: SelfAssessment,
   },
+  {
+    path: "/learner",
+    component: LearnerDashboard,
+    meta: { requiresAuth: true, roles: ["learner"] },
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: Admin,
+    meta: { requiresAuth: true, roles: ["admin"] },
+  },
 ];
 
 const router = createRouter({
@@ -36,18 +42,16 @@ const router = createRouter({
 
 router.beforeEach((to, _from, next) => {
   const store = useMainStore();
-  const isAuthenticated = store.isAuthenticated; // Determine if user is authenticated
-  const userRole = store.role; // Get the user's role
+  const isAuthenticated = store.isAuthenticated;
+  const userRole = store.role;
 
   if (to.meta.requiresAuth && !isAuthenticated) {
-    // Redirect to login if not authenticated
     next("/login");
   } else if (
     to.meta.roles &&
     Array.isArray(to.meta.roles) &&
     !to.meta.roles.includes(userRole)
   ) {
-    // Redirect to home or another page if user does not have required role
     next("/");
   } else {
     next();
