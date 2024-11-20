@@ -1,6 +1,6 @@
 <template>
   <div class="universal-container">
-    <h1 class="h1 text-primary-600">Self-assessment</h1>
+    <h1>This is the learner dashboard</h1>
   </div>
 </template>
 

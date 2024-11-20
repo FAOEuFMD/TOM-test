@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center flex-grow bg-primary-100 p-16">
+  <div class="universal-container">
     <div class="w-full max-w-xl p-8 bg-white rounded-lg shadow-md">
       <form @submit.prevent="login" class="space-y-4">
         <input
@@ -61,7 +61,10 @@ const store = useMainStore();
 
 const login = () => {
   // Replace with actual authentication logic
-  if (email.value === "admin@example.com" && password.value === "admin") {
+  if (
+    email.value === "admin@eufmd-tom.com" &&
+    password.value === "tom@dmin22"
+  ) {
     store.login("admin");
     router.push("/admin");
   } else if (
