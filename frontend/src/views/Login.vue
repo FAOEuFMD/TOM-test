@@ -52,6 +52,7 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { useMainStore } from "../stores/main";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/24/outline";
+import { mockApiCall } from "../api/auth";
 
 const email = ref("");
 const password = ref("");
@@ -60,22 +61,18 @@ const router = useRouter();
 const store = useMainStore();
 
 const login = () => {
-  // Replace with actual authentication logic
-  if (
-    email.value === "admin@eufmd-tom.com" &&
-    password.value === "tom@dmin22"
-  ) {
-    store.login("admin");
-    router.push("/admin");
-  } else if (
-    email.value === "learner@example.com" &&
-    password.value === "learner"
-  ) {
-    store.login("learner");
-    router.push("/learner");
-  } else {
-    alert("Invalid credentials");
-  }
+  mockApiCall(email.value, password.value)
+    .then(response => {
+      store.login(response.role);
+      if (response.role === "admin") {
+        router.push("/admin");
+      } else if (response.role === "user") {
+        router.push("/learner");
+      }
+    })
+    .catch(error => {
+      alert(error.message);
+    });
 };
 
 const togglePasswordVisibility = () => {
