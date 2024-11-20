@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.universal-container {
+  @apply flex flex-col flex-1 max-w-5xl mx-auto box-border overflow-y-auto overflow-x-hidden px-16 py-24 items-center justify-center;
+}

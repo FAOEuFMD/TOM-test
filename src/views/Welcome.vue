@@ -1,8 +1,6 @@
 <template>
-  <div
-    class="flex flex-col flex-1 max-w-5xl mx-auto p-16 box-border overflow-y-auto"
-  >
-    <h1 class="text-2xl font-bold mb-4 text-accent-950">
+  <div class="universal-container">
+    <h1 class="text-2xl font-bold mb-4 text-accent-950 self-start w-full">
       {{ $t("welcome.header") }}
     </h1>
     <p class="text-lg mb-6 text-accent-950 text-justify">
