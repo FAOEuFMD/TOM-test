@@ -1,19 +1,22 @@
 import request from "supertest";
-import express from "express";
-import bodyParser from "body-parser";
+import app from "./server";
 
-const app = express();
-app.use(bodyParser.json());
+let server: ReturnType<typeof app.listen>;
 
-app.post("/api/login", (_, res) => {
-  res.status(200).send({ message: "Login endpoint hit" });
+beforeAll(async () => {
+  server = app.listen(3001); // Start the server
+});
+
+afterAll(async () => {
+  await server.close(); // Close the server after tests
 });
 
 describe("POST /api/login", () => {
   it("should return user role for valid credentials", async () => {
     const response = await request(app)
       .post("/api/login")
-      .send({ email: "user@example.com", password: "password" });
+      .send({ email: "user1@example.com", password: "password1" });
+
     expect(response.status).toBe(200);
     expect(response.body.role).toBe("user");
   });
@@ -22,7 +25,12 @@ describe("POST /api/login", () => {
     const response = await request(app)
       .post("/api/login")
       .send({ email: "invalid@example.com", password: "wrongpassword" });
+
     expect(response.status).toBe(401);
     expect(response.body.message).toBe("Invalid credentials");
   });
+});
+
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Unhandled Rejection at:", promise, "reason:", reason);
 });

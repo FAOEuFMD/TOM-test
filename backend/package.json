@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.ts",
   "scripts": {
-    "test": "jest",
+    "test": "cross-env NODE_ENV=test jest",
     "start": "ts-node --project tsconfig.node.json server.ts"
   },
   "dependencies": {
@@ -17,6 +17,9 @@
     "@types/express": "^5.0.0",
     "@types/jest": "^29.5.14",
     "@types/supertest": "^6.0.2",
-    "supertest": "^7.0.0"
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.0.5"
   }
 }

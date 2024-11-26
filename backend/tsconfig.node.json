@@ -7,12 +7,11 @@
     "composite": true,
     "outDir": "./dist",
 
-    /* Bundler mode */
+    /* Module settings */
     "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "emitDeclarationOnly": true,
+    "emitDeclarationOnly": false,
 
     /* Linting */
     "strict": true,
