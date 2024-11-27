@@ -1,12 +1,11 @@
 {
-  "name": "tom",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "frontend",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "jest"
   },
   "dependencies": {
     "@heroicons/vue": "^2.1.5",
