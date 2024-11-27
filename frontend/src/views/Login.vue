@@ -66,7 +66,7 @@ const login = () => {
       store.login(response.role);
       if (response.role === "admin") {
         router.push("/admin");
-      } else if (response.role === "user") {
+      } else if (response.role === "learner") {
         router.push("/learner");
       }
     })

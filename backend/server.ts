@@ -1,14 +1,22 @@
 import express from "express";
-import bodyParser from "body-parser";
 import authRoutes from "./routes/authRoutes";
 import dotenv from "dotenv";
+import cors from "cors";
 
 dotenv.config({ path: "./.env" });
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
+
+app.use(express.json());
 
 app.use("/api", authRoutes);
 
