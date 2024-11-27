@@ -71,7 +71,7 @@ Before you begin, ensure you have met the following requirements:
     Create a `.env` file in the `backend` directory with the following variables:
 
     ```env
-    PORT=3001
+    PORT=3000
     DATABASE_URL=your_database_url
     JWT_SECRET=your_jwt_secret
     ```
@@ -91,7 +91,7 @@ Before you begin, ensure you have met the following requirements:
     Create a `.env` file in the `frontend` directory with the following variables:
 
     ```env
-    VUE_APP_API_URL=http://localhost:3001/api
+    VUE_APP_API_URL=http://localhost:3000/api
     ```
 
     - **VUE_APP_API_URL:** The base URL for the backend API.
@@ -136,7 +136,7 @@ The backend uses **Jest** for testing.
     npm test
     ```
 
-    This will execute all tests located in the `backend` directory, including `server.test.ts`.
+    This will execute all tests located in the `backend` directory, including `server.test.ts`. The Node server will run on port 3000 by default, while the test server will run on port 3001.
 
 ### Frontend Tests
 
