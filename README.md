@@ -64,6 +64,25 @@ Before you begin, ensure you have met the following requirements:
 
 ## Configuration
 
+### Root Level
+
+1. **Environment Variables:**
+
+   The root `.env` file contains global configuration variables used by project-wide tools and services.
+
+   ```env
+   # Application settings
+   APP_ENV=development
+   APP_DEBUG=true
+   APP_URL=http://localhost:8080
+   NODE_ENV=test
+   ```
+
+   - **APP_ENV:** Defines the environment mode for global tools.
+   - **APP_DEBUG:** Enables or disables debug mode for global services.
+   - **APP_URL:** Base URL for the application.
+   - **NODE_ENV:** Sets the Node environment; ensure it does not conflict with backend/frontend settings.
+
 ### Backend
 
 1.  **Environment Variables:**
