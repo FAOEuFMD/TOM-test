@@ -13,6 +13,9 @@
 - [Running the Application](#running-the-application)
   - [Backend Running](#backend-running)
   - [Frontend Running](#frontend-running)
+- [Building the Application](#building-the-application)
+  - [Backend Building](#backend-building)
+  - [Frontend Building](#frontend-building)
 - [Running Tests](#running-tests)
   - [Backend Tests](#backend-tests)
   - [Frontend Tests](#frontend-tests)
@@ -137,6 +140,40 @@ Before you begin, ensure you have met the following requirements:
 
    The frontend application will start on `http://localhost:5173` by default and communicate with the backend API.
 
+## Building the Application
+
+### Backend Building
+
+1. **Navigate to the backend directory:**
+
+   ```bash
+   cd backend
+   ```
+
+2. **Build the backend:**
+
+   ```bash
+   npm run build
+   ```
+
+   - This compiles the TypeScript code into JavaScript and outputs it to the `dist` directory as specified in `tsconfig.node.json`.
+
+### Frontend Building
+
+1. **Navigate to the frontend directory:**
+
+   ```bash
+   cd frontend
+   ```
+
+2. **Build the frontend:**
+
+   ```bash
+   npm run build
+   ```
+
+   - This bundles the frontend application for production.
+
 ## Running Tests
 
 ### Backend Tests
@@ -177,10 +214,32 @@ The frontend also uses **Jest** for testing.
 
 ## Project Structure
 
-- **backend/**: Contains the backend server code, routes, tests, and configuration files.
-- **frontend/**: Contains the frontend application code and related files.
-- **.gitignore**: Specifies files and directories to be ignored by Git.
-- **README.md**: This documentation file.
+```plaintext
+TOM/
+├── backend/
+│   ├── src/
+│   │   ├── routes/
+│   │   │   └── authRoutes.ts
+│   │   ├── config/
+│   │   ├── models/
+│   │   ├── controllers/
+│   │   └── server.ts
+│   ├── package.json
+│   ├── tsconfig.node.json
+│   ├── jest.config.js
+│   └── ...other backend files
+├── frontend/
+│   ├── src/
+│   │   ├── api/
+│   │   ├── views/
+│   │   └── ...other frontend files
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── ...other frontend files
+├── .gitignore
+├── README.md
+└── ...other root files
+```
 
 ## License
 
