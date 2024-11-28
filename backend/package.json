@@ -4,8 +4,9 @@
   "main": "server.ts",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest",
-    "start": "ts-node --project tsconfig.node.json server.ts",
-    "dev": "nodemon server.ts"
+    "start": "ts-node --project tsconfig.node.json src/server.ts",
+    "dev": "nodemon src/server.ts",
+    "build": "tsc"
   },
   "dependencies": {
     "body-parser": "^1.20.3",
