@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "server.ts",
+  "main": "src/server.ts",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest",
     "start": "ts-node --project tsconfig.node.json src/server.ts",
