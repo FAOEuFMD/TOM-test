@@ -6,6 +6,7 @@
     "skipLibCheck": true,
     "composite": true,
     "outDir": "./dist",
+    "rootDir": "./src",
 
     /* Module settings */
     "moduleResolution": "node",

@@ -24,7 +24,7 @@ app.use(
 
 app.use(express.json());
 
-app.use("/api", authRoutes);
+app.use("/auth", authRoutes);
 
 if (process.env.NODE_ENV !== "test") {
   app.listen(PORT, () => {
