@@ -1,7 +1,7 @@
 <template>
   <div class="universal-container">
     <div class="w-full max-w-xl p-8 bg-white rounded-lg shadow-md">
-      <form @submit.prevent="login" class="space-y-4">
+      <form @submit.prevent="performLogin" class="space-y-4">
         <input
           v-model="email"
           type="email"
@@ -52,7 +52,7 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { useMainStore } from "../stores/main";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/24/outline";
-import { mockApiCall } from "../api/auth";
+import { login } from "../services/authService";
 
 const email = ref("");
 const password = ref("");
@@ -60,24 +60,23 @@ const showPassword = ref(false);
 const router = useRouter();
 const store = useMainStore();
 
-const login = () => {
-  mockApiCall(email.value, password.value)
-    .then(response => {
-      store.login(response.role);
-      if (response.role === "admin") {
-        router.push("/admin");
-      } else if (response.role === "learner") {
-        router.push("/learner");
-      }
-    })
-    .catch(error => {
-      alert(error.message);
-    });
+const performLogin = async () => {
+  try {
+    const response = await login(email.value, password.value);
+    store.login(response.role);
+    if (response.role === "admin") {
+      router.push("/admin");
+    } else if (response.role === "learner") {
+      router.push("/learner");
+    }
+  } catch (error: any) {
+    alert(error.message);
+  }
 };
 
 const togglePasswordVisibility = () => {
   showPassword.value = !showPassword.value;
 };
-
-defineExpose({ EyeIcon, EyeSlashIcon });
 </script>
+
+<style scoped></style>

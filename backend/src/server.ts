@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 const allowedOrigins = [
   "http://localhost:5173",
   "http://127.0.0.1:5173",
-  "https://eufmd-tom.com/",
+  "https://eufmd-tom.com",
 ];
 
 app.use(
@@ -24,7 +24,7 @@ app.use(
 
 app.use(express.json());
 
-app.use("/auth", authRoutes);
+app.use("/api/auth", authRoutes);
 
 if (process.env.NODE_ENV !== "test") {
   app.listen(PORT, () => {
