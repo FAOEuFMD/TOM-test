@@ -1,64 +1,65 @@
 {
   "learner": {
-    "id": 123,
-    "email": "string",
-    "fullName": "string",
-    "position": "string",
-    "password": "string",
-    "country": "string",
-    "region": "string",
-    "role": "string",
-    "registrationDate": "timestamp",
-    "lastLogin": "timestamp",
-    "lastLogout": "timestamp",
-    "privacyPolicyAccepted": false,
-    "competencyFrameworks": ["global", "countrySpecific"],
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john.doe@example.com",
+    "full_name": "John Doe",
+    "position": "Veterinarian",
+    "password": "password123",
+    "country": "Italy",
+    "region": "Lombardy",
+    "role": "learner",
+    "registration_date": "2022-01-01T00:00:00Z",
+    "last_login": "2022-01-10T12:34:56Z",
+    "last_logout": "2022-01-10T15:20:30Z",
+    "privacy_policy_accepted": false,
+    "competency_frameworks": ["global", "country_specific"],
     "competencies": {
       "global": [
         {
-          "animalWelfare": {
-            "currentLevel": "none",
-            "requiredLevel": "expert",
-            "enrolledCategories": 0
+          "animal_welfare": {
+            "current_level": "none",
+            "required_level": "expert",
+            "enrolled_categories": 0
           },
           "biosecurity": {
-            "currentLevel": "none",
-            "requiredLevel": "competent",
-            "enrolledCategories": 0
+            "current_level": "none",
+            "required_level": "competent",
+            "enrolled_categories": 0
           },
           "dpcp": {
-            "currentLevel": "awareness",
-            "requiredLevel": "expert",
-            "enrolledCategories": 2
+            "current_level": "awareness",
+            "required_level": "expert",
+            "enrolled_categories": 2
           },
-          "emergencyPreparedness": {
-            "currentLevel": "none",
-            "requiredLevel": "proficient",
-            "enrolledCategories": 0
+          "emergency_preparedness": {
+            "current_level": "none",
+            "required_level": "proficient",
+            "enrolled_categories": 0
           },
-          "emergencyResponse": {
-            "currentLevel": "none",
-            "requiredLevel": "awareness",
-            "enrolledCategories": 0
+          "emergency_response": {
+            "current_level": "none",
+            "required_level": "awareness",
+            "enrolled_categories": 0
           }
         }
       ],
-      "countrySpecific": [
+      "country_specific": [
         {
           "epidemiology": {
-            "currentLevel": "awareness",
-            "requiredLevel": "proficient",
-            "enrolledCategories": 1
+            "current_level": "awareness",
+            "required_level": "proficient",
+            "enrolled_categories": 1
           },
           "biosecurity": {
-            "currentLevel": "none",
-            "requiredLevel": "beginner",
-            "enrolledCategories": 0
+            "current_level": "none",
+            "required_level": "beginner",
+            "enrolled_categories": 0
           },
           "dpcp": {
-            "currentLevel": "awareness",
-            "requiredLevel": "expert",
-            "enrolledCategories": 0
+            "current_level": "awareness",
+            "required_level": "expert",
+            "enrolled_categories": 0
           }
         }
       ]
@@ -68,22 +69,22 @@
         "name": "string",
         "progress": 100,
         "status": "complete",
-        "yearCompleted": 2019
+        "year_completed": 2019
       },
       {
         "name": "string",
         "progress": 100,
         "status": "complete",
-        "yearCompleted": 2020
+        "year_completed": 2020
       },
       {
         "name": "string",
         "progress": 50,
-        "status": "inProgress",
-        "yearCompleted": 2019
+        "status": "in_progress",
+        "year_completed": 2019
       }
     ],
-    "selfAssessment": {
+    "self_assessment": {
       "scores": [
         {
           "competency": "epidemiology",
@@ -103,12 +104,12 @@
       {
         "name": "string",
         "file": "fileURL",
-        "dateUploaded": "timestamp"
+        "date_uploaded": "timestamp"
       },
       {
         "name": "string",
         "file": "fileURL",
-        "dateUploaded": "timestamp"
+        "date_uploaded": "timestamp"
       }
     ]
   }

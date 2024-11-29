@@ -34,12 +34,12 @@
         </button>
       </form>
       <div class="mt-4 text-center space-y-2">
-        <a href="#" class="text-primary-600 hover:underline">{{
-          $t("account.forgotPassword")
+        <a href="/forgot-password" class="text-primary-600 hover:underline">{{
+          $t("account.forgot_password")
         }}</a>
         <div>
           <a href="#" class="text-red-600 hover:underline">{{
-            $t("account.createAccount")
+            $t("account.create_account")
           }}</a>
         </div>
       </div>
@@ -78,5 +78,4 @@ const togglePasswordVisibility = () => {
   showPassword.value = !showPassword.value;
 };
 </script>
-
 <style scoped></style>
