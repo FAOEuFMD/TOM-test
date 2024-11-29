@@ -12,13 +12,13 @@ afterAll(async () => {
 });
 
 describe("POST /api/login", () => {
-  it("should return user role for valid credentials", async () => {
+  it("should return learner role for valid credentials", async () => {
     const response = await request(app)
       .post("/api/login")
-      .send({ email: "user1@example.com", password: "password1" });
+      .send({ email: "learner1@example.com", password: "password1" });
 
     expect(response.status).toBe(200);
-    expect(response.body.role).toBe("user");
+    expect(response.body.role).toBe("learner");
   });
 
   it("should return 401 for invalid credentials", async () => {

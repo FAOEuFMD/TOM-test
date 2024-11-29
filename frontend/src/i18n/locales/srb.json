@@ -25,7 +25,7 @@
   },
   "sidebar": {
     "home": "Kuжi",
-    "add_user_data": "Dodavanje korisničkih podataka",
+    "add_learner_data": "Dodavanje korisničkih podataka",
     "adjust_competency_levels": "Podešavanje nivoa kompetencije",
     "custom_reports": "Prilagođeni izveštaji",
     "courses": "Kursevi",
@@ -94,10 +94,10 @@
   "Transboundary Animal Diseases": {
     "definition": "TADS su bolesti koje su veoma zarazne ili prenosive i imaju potencijal za veoma brzo širenje, bez obzira na nacionalne granice. Profilisanje bolesti se odnosi na Kliničke znake, etiologiju, patogenezu, klinički kurs, prenosni potencijal, epidemiologiju bolesti. Kontrola i prevencija nalaze se u nadležnosti kontrole i prevencije bolesti. MEĐU TAD-ovima su afrička svinjska groznica, visoko patogeni ptičiji grip, zarazna bovina pleuropneumonija, hemoragična septikaemija, grip A, rinderpest, groznica doline procepa , bliskoistočni respiratorni sindrom koronavirusa i bolesti stopala i usta."
   },
-  "userData": {
-    "single_user": "Jedan korisnik",
-    "bulk_user_upload": "Masovno otpremanje korisnika",
-    "add_a_single_user": "Dodavanje jednog korisnika",
+  "learnerData": {
+    "single_learner": "Jedan korisnik",
+    "bulk_learner_upload": "Masovno otpremanje korisnika",
+    "add_a_single_learner": "Dodavanje jednog korisnika",
     "first_name": "Ime",
     "last_name": "Prezime",
     "email": "E-pošta",
@@ -141,7 +141,7 @@
     "competent": "Kompetentan",
     "proficient": "Vešt",
     "expert": "Ekspert",
-    "add_user_data": "Dodavanje korisničkih podataka",
+    "add_learner_data": "Dodavanje korisničkih podataka",
     "filter_by_position_or_competency": "Filtriranje po položaju ili kompetencijama",
     "changing_competency_level": "Promena nivoa kompetencije",
     "for": "Za",
@@ -201,7 +201,7 @@
     "in_progress": "U toku"
   },
   "login": {
-    "username": "E-pošta",
+    "learnername": "E-pošta",
     "password": "Lozinku",
     "login": "Prijaviti se",
     "forgot_password": "Zaboravili ste lozinku?"
@@ -391,7 +391,7 @@
     "Single Learner": "Jednoumni učenik",
     "Competency Framework": "Okvir kompetencije",
     "Custom Report": "Prilagođeni izveštaj",
-    "Add User Data": "Dodavanje korisničkih podataka",
+    "Add learner Data": "Dodavanje korisničkih podataka",
     "Adjust Levels": "Podesi nivoe",
     "admin_login": "Prijavljivanje administratora",
     "Admin": "Administratorskog",
