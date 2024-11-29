@@ -25,7 +25,7 @@
   },
   "sidebar": {
     "home": "Casa",
-    "add_user_data": "Aggiungi dati utente",
+    "add_learner_data": "Aggiungi dati utente",
     "adjust_competency_levels": "Regolare i livelli di competenza",
     "custom_reports": "Rapporti personalizzati",
     "courses": "Corsi",
@@ -94,10 +94,10 @@
   "Transboundary Animal Diseases": {
     "definition": "Le TADS sono malattie altamente contagiose o trasmissibili e con un potenziale di diffusione molto rapido, indipendentemente dai confini nazionali. Il profilo della malattia si riferisce ai segni clinici, all'eziologia, alla patogenesi, al decorso clinico, al potenziale di trasmissione e all'epidemiologia della malattia. Il controllo e la prevenzione rientrano nelle competenze del controllo e della prevenzione delle malattie. Le DAT comprendono la peste suina africana, l'influenza aviaria ad alta patogenicità, la pleuropolmonite contagiosa bovina, la setticemia emorragica, l'influenza A, la peste bovina, la febbre della valle del fiume, il coronavirus della sindrome respiratoria del Medio Oriente e l'afta epizootica."
   },
-  "userData": {
-    "single_user": "Utente singolo",
-    "bulk_user_upload": "Caricamento massivo degli utenti",
-    "add_a_single_user": "Aggiungere un singolo utente",
+  "learnerData": {
+    "single_learner": "Utente singolo",
+    "bulk_learner_upload": "Caricamento massivo degli utenti",
+    "add_a_single_learner": "Aggiungere un singolo utente",
     "first_name": "Nome",
     "last_name": "Cognome",
     "email": "Email",
@@ -141,7 +141,7 @@
     "competent": "Competente",
     "proficient": "Competente",
     "expert": "Esperto",
-    "add_user_data": "Aggiungi dati utente",
+    "add_learner_data": "Aggiungi dati utente",
     "filter_by_position_or_competency": "Filtrare per posizione o competenza",
     "changing_competency_level": "Modificare il livello di competenza di",
     "for": "per",
@@ -201,7 +201,7 @@
     "in_progress": "In corso"
   },
   "login": {
-    "username": "Email",
+    "learnername": "Email",
     "password": "Password",
     "login": "Accedi",
     "forgot_password": "Hai dimenticato la password?"
@@ -391,7 +391,7 @@
     "Single Learner": "Studente singolo",
     "Competency Framework": "Quadro delle competenze",
     "Custom Report": "Rapporto personalizzato",
-    "Add User Data": "Aggiungi dati utente",
+    "Add learner Data": "Aggiungi dati utente",
     "Adjust Levels": "Regola i livelli",
     "admin_login": "Accesso amministratore",
     "Admin": "Admin",

@@ -35,7 +35,7 @@
     "single_learner": "Single Learner",
     "competency_framework": "Competency Framework",
     "custom_report": "Custom Report",
-    "add_user_data": "Add User Data",
+    "add_learner_data": "Add learner Data",
     "adjust_levels": "AdjustLevels",
     "admin_login": "Admin Login",
     "admin": "Admin",
@@ -43,7 +43,7 @@
   },
   "sidebar": {
     "home": "Home",
-    "add_user_data": "Add User Data",
+    "add_learner_data": "Add learner Data",
     "adjust_competency_levels": "Adjust Competency Levels",
     "custom_reports": "Custom Reports",
     "courses": "Courses",
@@ -101,10 +101,10 @@
   "transboundary_animal_diseases": {
     "definition": "TADS are diseases which are highly contagious or transmissible and have the potential for very rapid spread, irrespective of national borders. Disease profiling refers to the Clinical signs, etiology, pathogenesis, clinical course, transmission potential, epidemiology of the disease. Control and prevention are found within the competency of disease control and prevention. TADs include African swine fever, highly pathogenic avian influenza, contagious bovine pleuropneumonia, haemorrhagic septicaemia, influenza A, rinderpest, rift valley fever , middle east respiratory syndrome coronavirus and foot and mouth disease."
   },
-  "user_data": {
-    "single_user": "Single User",
-    "bulk_user_upload": "Bulk User Upload",
-    "add_a_single_user": "Add a Single user",
+  "learner_data": {
+    "single_learner": "Single learner",
+    "bulk_learner_upload": "Bulk learner Upload",
+    "add_a_single_learner": "Add a Single learner",
     "first_name": "First Name",
     "last_name": "Last Name",
     "email": "Email",
@@ -147,7 +147,7 @@
     "competent": "Competent",
     "proficient": "Proficient",
     "expert": "Expert",
-    "add_user_data": "Add User Data",
+    "add_learner_data": "Add learner Data",
     "filter_by_position_or_competency": "Filter by position or competency",
     "changing_competency_level": "Changing the competency level of",
     "for": "for",
@@ -205,7 +205,7 @@
     "pcp": "PCP"
   },
   "login": {
-    "username": "Email",
+    "learnername": "Email",
     "password": "Password",
     "login": "Log in",
     "forgot_password": "Forgot password?"

@@ -3,7 +3,7 @@ import Welcome from "../views/Welcome.vue";
 import Login from "../views/Login.vue";
 import Admin from "../views/Admin.vue";
 import SelfAssessment from "../views/SelfAssessment.vue";
-import LearnerDashboard from "../views/LearnerDashboard.vue";
+import LearnerView from "../views/LearnerView.vue";
 import { useMainStore } from "../stores/main";
 
 const routes = [
@@ -24,7 +24,7 @@ const routes = [
   },
   {
     path: "/learner",
-    component: LearnerDashboard,
+    component: LearnerView,
     meta: { requiresAuth: true, roles: ["learner"] },
   },
   {
@@ -43,14 +43,14 @@ const router = createRouter({
 router.beforeEach((to, _from, next) => {
   const store = useMainStore();
   const isAuthenticated = store.isAuthenticated;
-  const userRole = store.role;
+  const learnerRole = store.role;
 
   if (to.meta.requiresAuth && !isAuthenticated) {
     next("/login");
   } else if (
     to.meta.roles &&
     Array.isArray(to.meta.roles) &&
-    !to.meta.roles.includes(userRole)
+    !to.meta.roles.includes(learnerRole)
   ) {
     next("/");
   } else {

@@ -35,7 +35,7 @@
     "single_learner": "Aprendiz individual",
     "competency_framework": "Marco de competencias",
     "custom_report": "Informe personalizado",
-    "add_user_data": "Agregar datos de usuario",
+    "add_learner_data": "Agregar datos de usuario",
     "adjust_levels": "Ajustar niveles",
     "admin_login": "Inicio de sesión de administrador",
     "admin": "Administrador",
@@ -43,7 +43,7 @@
   },
   "sidebar": {
     "home": "Inicio",
-    "add_user_data": "Agregar datos de usuario",
+    "add_learner_data": "Agregar datos de usuario",
     "adjust_competency_levels": "Ajustar niveles de competencia",
     "custom_reports": "Informes personalizados",
     "courses": "Cursos",
@@ -101,10 +101,10 @@
   "transboundary_animal_diseases": {
     "definition": "Las TADS son enfermedades que son altamente contagiosas o transmisibles y tienen el potencial de propagarse muy rápidamente, independientemente de las fronteras nacionales. El perfil de la enfermedad se refiere a los signos clínicos, etiología, patogénesis, curso clínico, potencial de transmisión, epidemiología de la enfermedad. El control y la prevención se encuentran dentro de la competencia de control y prevención de enfermedades. Las TADs incluyen fiebre porcina africana, influenza aviar altamente patógena, pleuroneumonía bovina contagiosa, septicemia hemorrágica, influenza A, peste bovina, fiebre del valle del Rift, síndrome respiratorio de Oriente Medio por coronavirus y fiebre aftosa."
   },
-  "user_data": {
-    "single_user": "Usuario único",
-    "bulk_user_upload": "Carga masiva de usuarios",
-    "add_a_single_user": "Agregar un usuario único",
+  "learner_data": {
+    "single_learner": "Usuario único",
+    "bulk_learner_upload": "Carga masiva de usuarios",
+    "add_a_single_learner": "Agregar un usuario único",
     "first_name": "Nombre",
     "last_name": "Apellido",
     "email": "Correo electrónico",
@@ -147,7 +147,7 @@
     "competent": "Competente",
     "proficient": "Proficiente",
     "expert": "Experto",
-    "add_user_data": "Agregar datos de usuario",
+    "add_learner_data": "Agregar datos de usuario",
     "filter_by_position_or_competency": "Filtrar por puesto o competencia",
     "changing_competency_level": "Cambiando el nivel de competencia de",
     "for": "para",
@@ -205,7 +205,7 @@
     "pcp": "PCP"
   },
   "login": {
-    "username": "Correo electrónico",
+    "learnername": "Correo electrónico",
     "password": "Contraseña",
     "login": "Iniciar sesión",
     "forgot_password": "¿Olvidó su contraseña?"
