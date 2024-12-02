@@ -8,7 +8,7 @@
     "password": "password123",
     "country": "Italy",
     "region": "Lombardy",
-    "role": "learner",
+    "access_level": "learner",
     "registration_date": "2022-01-01T00:00:00Z",
     "last_login": "2022-01-10T12:34:56Z",
     "last_logout": "2022-01-10T15:20:30Z",

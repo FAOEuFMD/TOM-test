@@ -63,10 +63,10 @@ const store = useMainStore();
 const performLogin = async () => {
   try {
     const response = await login(email.value, password.value);
-    store.login(response.role);
-    if (response.role === "admin") {
+    store.login(response.access_level);
+    if (response.access_level === "admin") {
       router.push("/admin");
-    } else if (response.role === "learner") {
+    } else if (response.access_level === "learner") {
       router.push("/learner");
     }
   } catch (error: any) {

@@ -1,35 +1,45 @@
 import express from "express";
-import authRoutes from "./routes/authRoutes";
-import dotenv from "dotenv";
+import bodyParser from "body-parser";
 import cors from "cors";
+import authRoutes from "./routes/authRoutes";
+import healthRoutes from "./routes/healthRoutes";
+import db from "./db";
+import dotenv from "dotenv";
+import logger from "./logger";
 
-dotenv.config({ path: "./.env" });
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const allowedOrigins = [
-  "http://localhost:5173",
-  "http://127.0.0.1:5173",
-  "https://eufmd-tom.com",
-];
-
+// Middleware
+app.use(bodyParser.json());
 app.use(
   cors({
-    origin: allowedOrigins,
-    methods: ["GET", "POST"],
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );
 
-app.use(express.json());
+// Routes
+app.use("/auth", authRoutes);
+app.use("/health", healthRoutes);
 
-app.use("/api/auth", authRoutes);
+// Test Database Connection Before Starting the Server
+const startServer = async () => {
+  try {
+    await db.execute("SELECT 1");
+    logger.info("✅ Database connected successfully.");
 
-if (process.env.NODE_ENV !== "test") {
-  app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-  });
-}
+    app.listen(PORT, () => {
+      logger.info(`🚀 Server is running on port ${PORT}`);
+    });
+  } catch (error) {
+    logger.error("❌ Failed to connect to the database: %s", error);
+    process.exit(1); // Exit the process with failure
+  }
+};
+
+startServer();
 
 export default app;

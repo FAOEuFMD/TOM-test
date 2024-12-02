@@ -1,7 +1,7 @@
 export const login = async (
   email: string,
   password: string
-): Promise<{ role: string }> => {
+): Promise<{ access_level: string }> => {
   try {
     const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/login`, {
       method: "POST",
@@ -17,8 +17,11 @@ export const login = async (
       throw new Error(errorData.message || "Login failed");
     }
 
-    return await response.json();
+    const data = await response.json();
+    console.log("Login response data:", data);
+    return { access_level: data.access_level };
   } catch (error: any) {
+    console.error("Login error:", error);
     throw new Error(error.message || "An error occurred during login");
   }
 };
