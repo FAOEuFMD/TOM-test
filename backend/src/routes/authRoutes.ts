@@ -5,6 +5,10 @@ import logger from "../logger";
 
 const router = Router();
 
+router.get("/", (_req, res) => {
+  res.json({ message: "Auth router is working" });
+});
+
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -13,11 +17,9 @@ router.post("/login", async (req, res) => {
       "SELECT password, access_level FROM users WHERE email = ?",
       [email]
     );
-    logger.debug("Database query returned %d rows", (rows as any[]).length);
     if ((rows as any[]).length > 0) {
       const user = (rows as any[])[0];
       const isPasswordValid = await bcrypt.compare(password, user.password);
-      logger.debug("Password valid: %s", isPasswordValid);
       if (isPasswordValid) {
         logger.info("User %s logged in successfully.", email);
         res.json({ access_level: user.access_level });

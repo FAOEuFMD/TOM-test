@@ -3,7 +3,7 @@ import db from "../db";
 
 const router = Router();
 
-router.get("/health", async (_req: Request, res: Response) => {
+router.get("/", async (_req: Request, res: Response) => {
   try {
     await db.execute("SELECT 1");
     res.status(200).json({ status: "UP", database: "connected" });

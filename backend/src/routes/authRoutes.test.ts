@@ -1,27 +1,53 @@
 import request from "supertest";
-import app from "../../src/server";
-import db from "../../src/db";
+import bcrypt from "bcrypt";
+import db from "../db";
+import express from "express";
+import authRoutes from "./authRoutes";
 
-jest.mock("../../src/db");
+// Mock the database module
+jest.mock("../db", () => ({
+  execute: jest.fn(),
+}));
+
+// Create a test app without listening on a port
+const app = express();
+app.use(express.json());
+app.use("/auth", authRoutes);
 
 describe("POST /login - Unit Tests", () => {
-  it("should return user access level on valid credentials", async () => {
-    (db.execute as jest.Mock).mockResolvedValue([[{ access_level: "admin" }]]);
+  beforeEach(async () => {
+    jest.clearAllMocks();
 
-    const response = await request(app)
-      .post("/login")
-      .send({ email: "admin@example.com", password: "admin123" });
+    const hashedPassword = await bcrypt.hash("1Password!", 10);
+
+    (db.execute as jest.Mock).mockResolvedValue([
+      [
+        {
+          password: hashedPassword,
+          access_level: "user",
+        },
+      ],
+    ]);
+  });
+
+  it("should return user access level on valid credentials", async () => {
+    const response = await request(app).post("/auth/login").send({
+      email: "test1@gmail.com",
+      password: "1Password!",
+    });
 
     expect(response.status).toBe(200);
-    expect(response.body).toEqual({ access_level: "admin" });
+    expect(response.body).toHaveProperty("access_level");
+    expect(db.execute).toHaveBeenCalledWith(
+      expect.any(String),
+      expect.arrayContaining(["test1@gmail.com"])
+    );
   });
 
   it("should return 401 on invalid credentials", async () => {
-    (db.execute as jest.Mock).mockResolvedValue([[]]);
-
     const response = await request(app)
-      .post("/login")
-      .send({ email: "invalid@example.com", password: "wrongpass" });
+      .post("/auth/login")
+      .send({ email: "test1@gmail.com", password: "wrongpassword" });
 
     expect(response.status).toBe(401);
     expect(response.body).toEqual({ message: "Invalid credentials" });

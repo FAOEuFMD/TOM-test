@@ -4,17 +4,11 @@ import logger from "./logger";
 
 dotenv.config();
 
-const isTestEnv = process.env.NODE_ENV === "test";
-
 const pool = mysql.createPool({
   host: process.env.DATABASE_HOST,
   user: process.env.DATABASE_USER,
-  password: isTestEnv
-    ? process.env.DATABASE_PASSWORD_TEST
-    : process.env.DATABASE_PASSWORD,
-  database: isTestEnv
-    ? process.env.DATABASE_NAME_TEST
-    : process.env.DATABASE_NAME,
+  password: process.env.DATABASE_PASSWORD,
+  database: process.env.DATABASE_NAME,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
