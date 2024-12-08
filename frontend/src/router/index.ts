@@ -48,9 +48,9 @@ router.beforeEach((to, _from, next) => {
   if (to.meta.requiresAuth && !isAuthenticated) {
     next("/login");
   } else if (
-    to.meta.roles &&
-    Array.isArray(to.meta.roles) &&
-    !to.meta.roles.includes(learnerAccessLevel)
+    to.meta.access_level &&
+    Array.isArray(to.meta.access_level) &&
+    !to.meta.access_level.includes(learnerAccessLevel)
   ) {
     next("/");
   } else {
