@@ -25,13 +25,13 @@ const routes = [
   {
     path: "/learner",
     component: LearnerView,
-    meta: { requiresAuth: true, roles: ["learner"] },
+    meta: { requiresAuth: true, access_level: ["learner"] },
   },
   {
     path: "/admin",
     name: "Admin",
     component: Admin,
-    meta: { requiresAuth: true, roles: ["admin"] },
+    meta: { requiresAuth: true, access_level: ["admin"] },
   },
 ];
 
@@ -43,14 +43,14 @@ const router = createRouter({
 router.beforeEach((to, _from, next) => {
   const store = useMainStore();
   const isAuthenticated = store.isAuthenticated;
-  const learnerRole = store.role;
+  const learnerAccessLevel = store.access_level;
 
   if (to.meta.requiresAuth && !isAuthenticated) {
     next("/login");
   } else if (
-    to.meta.roles &&
-    Array.isArray(to.meta.roles) &&
-    !to.meta.roles.includes(learnerRole)
+    to.meta.access_level &&
+    Array.isArray(to.meta.access_level) &&
+    !to.meta.access_level.includes(learnerAccessLevel)
   ) {
     next("/");
   } else {

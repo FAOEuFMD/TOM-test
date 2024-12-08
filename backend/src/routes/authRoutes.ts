@@ -1,25 +1,42 @@
 import { Router } from "express";
+import db from "../db";
+import bcrypt from "bcrypt";
+import logger from "../logger";
 
 const router = Router();
 
-const learners = [
-  { email: "learner1@example.com", password: "password1", role: "learner" },
-  { email: "learner2@example.com", password: "password2", role: "learner" },
-  { email: "admin@example.com", password: "admin123", role: "admin" },
-  { email: "guest@example.com", password: "guestpass", role: "guest" },
-  { email: "test@example.com", password: "testpass", role: "learner" },
-];
+router.get("/", (_req, res) => {
+  res.json({ message: "Auth router is working" });
+});
 
-router.post("/login", (req, res) => {
+router.post("/login", async (req, res) => {
   const { email, password } = req.body;
-  const learner = learners.find(
-    u => u.email === email && u.password === password
-  );
-
-  if (learner) {
-    res.json({ role: learner.role });
-  } else {
-    res.status(401).json({ message: "Invalid credentials" });
+  try {
+    logger.debug("Login attempt for email: %s", email);
+    const [rows] = await db.execute(
+      "SELECT password, access_level FROM users WHERE email = ?",
+      [email]
+    );
+    if ((rows as any[]).length > 0) {
+      const user = (rows as any[])[0];
+      const isPasswordValid = await bcrypt.compare(password, user.password);
+      if (isPasswordValid) {
+        logger.info("User %s logged in successfully.", email);
+        res.json({ access_level: user.access_level });
+      } else {
+        logger.warn(
+          "Failed login attempt for user %s: Invalid password.",
+          email
+        );
+        res.status(401).json({ message: "Invalid credentials" });
+      }
+    } else {
+      logger.warn("Failed login attempt: User %s does not exist.", email);
+      res.status(401).json({ message: "Invalid credentials" });
+    }
+  } catch (error) {
+    logger.error("Login error for user %s: %s", email, error);
+    res.status(500).json({ message: "Server error" });
   }
 });
 

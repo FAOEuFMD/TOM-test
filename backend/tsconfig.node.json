@@ -1,16 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2023"],
-    "module": "commonjs",
+    "target": "ESNext",
+    "module": "ESNext",
     "skipLibCheck": true,
-    "composite": true,
     "outDir": "./dist",
     "rootDir": "./src",
+    "sourceMap": true,
 
     /* Module settings */
     "moduleResolution": "node",
-    "isolatedModules": true,
     "moduleDetection": "force",
     "emitDeclarationOnly": false,
 
@@ -19,7 +17,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["**/*.ts"]
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   preset: "ts-jest",
   testEnvironment: "node",
   testMatch: ["**/*.test.ts"],
@@ -10,5 +10,10 @@ module.exports = {
         tsconfig: "tsconfig.node.json",
       },
     ],
+  },
+  globals: {
+    "ts-jest": {
+      useESM: true,
+    },
   },
 };

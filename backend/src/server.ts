@@ -1,35 +1,47 @@
 import express from "express";
-import authRoutes from "./routes/authRoutes";
-import dotenv from "dotenv";
+import bodyParser from "body-parser";
 import cors from "cors";
-
-dotenv.config({ path: "./.env" });
+import authRoutes from "./routes/authRoutes";
+import healthRoutes from "./routes/healthRoutes";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const allowedOrigins = [
-  "http://localhost:5173",
-  "http://127.0.0.1:5173",
-  "https://eufmd-tom.com",
-];
-
+// Basic middleware
+app.use(bodyParser.json());
 app.use(
   cors({
-    origin: allowedOrigins,
-    methods: ["GET", "POST"],
+    origin: ["http://localhost:5173", "http://127.0.0.1:5173"],
     credentials: true,
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],
   })
 );
 
-app.use(express.json());
+// Mount routes
+app.use("/auth", authRoutes);
+app.use("/health", healthRoutes);
 
-app.use("/api/auth", authRoutes);
-
-if (process.env.NODE_ENV !== "test") {
-  app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+// 404 handler
+app.use((req, res) => {
+  res.status(404).json({
+    message: `No route found for ${req.method} ${req.originalUrl}`,
   });
-}
+});
 
-export default app;
+// Start server
+const startServer = async () => {
+  try {
+    const server = app.listen(PORT, () => {
+      console.log(`🚀 Server running on port ${PORT}`);
+    });
+    return server;
+  } catch (error) {
+    console.error("Failed to start server:", error);
+    process.exit(1);
+  }
+};
+
+startServer();
+
+export { app, startServer };

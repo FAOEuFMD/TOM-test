@@ -27,4 +27,11 @@ dist-ssr
 *.tsbuildinfo
 
 # Environment variable files
+backend/.env.*
+frontend/.env*
 .env
+
+# Distribution directories
+**/dist
+dist
+dist-ssr

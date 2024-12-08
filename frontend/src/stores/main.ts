@@ -4,19 +4,19 @@ export const useMainStore = defineStore("main", {
   state: () => ({
     count: 0,
     isAuthenticated: false,
-    role: "", // 'admin', 'learner', etc.
+    access_level: "", // 'admin', 'learner', etc.
   }),
   actions: {
     increment() {
       this.count++;
     },
-    login(role: string) {
+    login(access_level: string) {
       this.isAuthenticated = true;
-      this.role = role;
+      this.access_level = access_level;
     },
     logout() {
       this.isAuthenticated = false;
-      this.role = "";
+      this.access_level = "";
     },
   },
 });

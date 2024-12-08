@@ -9,4 +9,9 @@ const app = createApp(App);
 app.use(router);
 app.use(createPinia());
 app.use(i18n);
+
+if (!import.meta.env.VITE_API_URL) {
+  throw new Error("VITE_API_URL is not defined in the environment variables.");
+}
+
 app.mount("#app");

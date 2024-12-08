@@ -5,6 +5,12 @@ import autoprefixer from "autoprefixer";
 import path from "path";
 
 export default defineConfig({
+  server: {
+    port: 5173,
+  },
+  build: {
+    outDir: "dist",
+  },
   plugins: [vue()],
   css: {
     postcss: {
