@@ -50,7 +50,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { useMainStore } from "../stores/main";
+import { useAuthStore } from "@/stores/auth";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/24/outline";
 import { login } from "../services/authService";
 
@@ -58,12 +58,12 @@ const email = ref("");
 const password = ref("");
 const showPassword = ref(false);
 const router = useRouter();
-const store = useMainStore();
+const authStore = useAuthStore();
 
 const performLogin = async () => {
   try {
     const response = await login(email.value, password.value);
-    store.login(response.access_level);
+    authStore.login(response);
     if (response.access_level === "admin") {
       router.push("/admin");
     } else if (response.access_level === "learner") {

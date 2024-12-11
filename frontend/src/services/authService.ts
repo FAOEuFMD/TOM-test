@@ -1,7 +1,6 @@
-export const login = async (
-  email: string,
-  password: string
-): Promise<{ access_level: string }> => {
+import type { User } from "@/types/user";
+
+export async function login(email: string, password: string): Promise<User> {
   const url = `${import.meta.env.VITE_API_URL}/auth/login`;
 
   try {
@@ -19,15 +18,14 @@ export const login = async (
       if (contentType && contentType.includes("application/json")) {
         const errorData = await response.json();
         throw new Error(errorData.message || "Login failed");
-      } else {
-        throw new Error(`HTTP error! status: ${response.status}`);
       }
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     const data = await response.json();
-    return { access_level: data.access_level };
+    return data as User;
   } catch (error: any) {
     console.error("Login error:", error);
     throw error;
   }
-};
+}

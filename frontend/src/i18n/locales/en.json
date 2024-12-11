@@ -2,7 +2,8 @@
   "navbar_links": {
     "welcome": "Welcome",
     "login_register": "Login/Register",
-    "self_assessment": "Self-assessment"
+    "self_assessment": "Self-assessment",
+    "logout": "Logout"
   },
   "welcome": {
     "header": "Welcome to TOM",

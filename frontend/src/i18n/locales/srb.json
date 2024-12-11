@@ -2,7 +2,8 @@
   "navbar_links": {
     "welcome": "Добродошли",
     "login_register": "Пријава/Регистрација",
-    "self_assessment": "Самопроцена"
+    "self_assessment": "Самопроцена",
+    "logout": "Одјава"
   },
   "welcome": {
     "header": "Добродошли у TOM",

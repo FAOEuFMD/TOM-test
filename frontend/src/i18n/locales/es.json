@@ -2,7 +2,8 @@
   "navbar_links": {
     "welcome": "Bienvenido",
     "login_register": "Iniciar sesión/Registrarse",
-    "self_assessment": "Autoevaluación"
+    "self_assessment": "Autoevaluación",
+    "logout": "Cerrar sesión"
   },
   "welcome": {
     "header": "Bienvenidos a TOM",
