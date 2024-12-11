@@ -2,7 +2,8 @@
   "navbar_links": {
     "welcome": "Добро пожаловать",
     "login_register": "Вход/Регистрация",
-    "self_assessment": "Самооценка"
+    "self_assessment": "Самооценка",
+    "logout": "Выход"
   },
   "welcome": {
     "header": "Добро пожаловать в TOM",
