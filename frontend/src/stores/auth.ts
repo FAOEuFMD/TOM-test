@@ -25,6 +25,7 @@ export const useAuthStore = defineStore("auth", {
       this.isLoggedIn = false;
       this.user = null;
       this.access_level = "";
+      localStorage.clear();
     },
   },
 
