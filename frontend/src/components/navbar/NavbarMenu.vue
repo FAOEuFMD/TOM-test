@@ -13,11 +13,23 @@
     </li>
     <li class="hidden lg:block lg:col-span-1 xl:col-span-3"></li>
     <li
+      v-if="!isLoggedIn"
       class="col-span-1 flex items-center justify-center p-4 shadow-sm hover:bg-accent-500 focus:outline-none transition duration-300 ease-in-out"
     >
       <router-link to="/login" class="text-xl text-gray-100 hover:text-gray-50">
         {{ $t("navbar_links.login_register") }}
       </router-link>
+    </li>
+    <li
+      v-else
+      class="col-span-1 flex items-center justify-center p-4 shadow-sm hover:bg-accent-500 focus:outline-none transition duration-300 ease-in-out"
+    >
+      <a
+        @click="handleLogout"
+        class="text-xl text-gray-100 hover:text-gray-50 cursor-pointer"
+      >
+        {{ $t("navbar_links.logout") }}
+      </a>
     </li>
     <li class="flex items-center justify-center">
       <LocaleSwitcher></LocaleSwitcher>
@@ -28,6 +40,8 @@
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import LocaleSwitcher from "./LocaleSwitcher.vue";
+import { useAuthStore } from "@/stores/auth";
+import { useRouter } from "vue-router";
 
 interface Link {
   name: string;
@@ -47,6 +61,25 @@ export default defineComponent({
     menuClass: {
       type: String,
       default: "",
+    },
+  },
+  setup() {
+    const authStore = useAuthStore();
+    const router = useRouter();
+
+    const handleLogout = () => {
+      authStore.logout();
+      router.push("/login");
+    };
+
+    return {
+      authStore,
+      handleLogout,
+    };
+  },
+  computed: {
+    isLoggedIn() {
+      return this.authStore.isLoggedIn;
     },
   },
 });

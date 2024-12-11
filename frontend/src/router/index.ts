@@ -4,7 +4,7 @@ import Login from "../views/Login.vue";
 import Admin from "../views/Admin.vue";
 import SelfAssessment from "../views/SelfAssessment.vue";
 import LearnerView from "../views/LearnerView.vue";
-import { useMainStore } from "../stores/main";
+import { useAuthStore } from "@/stores/auth";
 
 const routes = [
   {
@@ -16,6 +16,7 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login,
+    meta: { requiresGuest: true },
   },
   {
     path: "/self-assessment",
@@ -41,18 +42,13 @@ const router = createRouter({
 });
 
 router.beforeEach((to, _from, next) => {
-  const store = useMainStore();
-  const isAuthenticated = store.isAuthenticated;
-  const learnerAccessLevel = store.access_level;
+  const authStore = useAuthStore();
+  const isAuthenticated = authStore.isLoggedIn;
 
   if (to.meta.requiresAuth && !isAuthenticated) {
     next("/login");
-  } else if (
-    to.meta.access_level &&
-    Array.isArray(to.meta.access_level) &&
-    !to.meta.access_level.includes(learnerAccessLevel)
-  ) {
-    next("/");
+  } else if (to.meta.requiresGuest && isAuthenticated) {
+    next("/learner");
   } else {
     next();
   }
