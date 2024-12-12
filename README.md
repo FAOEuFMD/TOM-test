@@ -9,7 +9,8 @@
 - [Installation](#installation)
   - [Backend](#backend)
   - [Frontend](#frontend)
-- [Configuration](#configuration)
+- [Environment Setup](#environment-setup)
+  - [Database Setup](#database-setup)
 - [Running the Application](#running-the-application)
   - [Backend Running](#backend-running)
   - [Frontend Running](#frontend-running)
@@ -29,13 +30,21 @@ This project is a full-stack application with a **backend** built using Node.js 
 
 ## Prerequisites
 
-Before you begin, ensure you have met the following requirements:
+Before you begin, ensure you have the following installed on your system:
 
 - **Node.js** (version 18 or higher)
-- **npm**
+- **npm** (version 9 or higher)
 - **Git**
+- **MySQL** (version 8 or higher)
 
 ## Installation
+
+First, clone the repository:
+
+```bash
+git clone <repository-url>
+cd TOM
+```
 
 ### Backend
 
@@ -51,6 +60,10 @@ Before you begin, ensure you have met the following requirements:
    npm install
    ```
 
+3. **Set up the database:**
+   - Create a MySQL database
+   - Note the connection details in the `.env.example` files
+
 ### Frontend
 
 1. **Navigate to the frontend directory:**
@@ -60,69 +73,73 @@ Before you begin, ensure you have met the following requirements:
    ```
 
 2. **Install frontend dependencies:**
-
    ```bash
    npm install
    ```
 
-## Configuration
+## Environment Setup
 
-### Root Level
+Copy the example environment files and update them with your configuration:
 
-1. **Environment Variables:**
+1. Root directory:
 
-   The root `.env` file contains global configuration variables used by project-wide tools and services.
-
-   ```env
-   # Application settings
-   APP_ENV=development
-   APP_DEBUG=true
-   APP_URL=http://localhost:8080
-   NODE_ENV=test
+   ```bash
+   cp .env.example .env
    ```
 
-   - **APP_ENV:** Defines the environment mode for global tools.
-   - **APP_DEBUG:** Enables or disables debug mode for global services.
-   - **APP_URL:** Base URL for the application.
-   - **NODE_ENV:** Sets the Node environment; ensure it does not conflict with backend/frontend settings.
+2. Backend directory:
 
-### Backend
-
-1. **Environment Variables:**
-
-   Create a `.env` file in the `backend` directory with the following variables:
-
-   ```env
-   PORT=3000
-   DATABASE_URL=your_database_url
-   JWT_SECRET=your_jwt_secret
+   ```bash
+   cp backend/.env.example backend/.env
    ```
 
-   - **PORT:** The port on which the backend server will run.
-   - **DATABASE_URL:** Connection string for your database.
-   - **JWT_SECRET:** Secret key for JWT authentication.
-
-2. **Database Setup:**
-
-   Ensure your database is set up and the `DATABASE_URL` in the `.env` file is correctly configured.
-
-### Frontend
-
-1. **Environment Variables:**
-
-   Create a `.env` file in the `frontend` directory with the following variables:
-
-   ```env
-   VITE_API_URL=http://localhost:3000/api
+3. Frontend directory:
+   ```bash
+   cp frontend/.env.example frontend/.env
    ```
 
-   - **VITE_API_URL:** The base URL for the backend API.
+Update each `.env` file with your specific configuration values.
+
+### Database Setup
+
+1. **Creating a dump from production:**
+
+   - Copy the production environment example file:
+     ```bash
+     cp .env.production.example .env.production
+     ```
+   - Update `.env.production` with your production database credentials:
+     ```
+     DATABASE_HOST=database.example.com
+     DATABASE_USER=prod_user
+     DATABASE_NAME=prod_db
+     DATABASE_PASSWORD=prod_password
+     ```
+   - Export the database:
+     ```bash
+     npm run db:export
+     ```
+   - This creates a `database_dump.sql` file using the production credentials in the backend/database/dumps directory.
+
+2. **Import to local database:**
+   ```bash
+   npm run db:import
+   ```
+   - This creates a local copy of the database using your the credentials in your .env.development file.
+
+Note: Keep your `.env.production` file secure and never commit it to version control.
 
 ## Running the Application
 
-### Backend Running
+### Backend
 
-1. **Start the backend server:**
+1. **Start the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+2. **Start in production mode:**
 
    ```bash
    npm start
@@ -130,9 +147,9 @@ Before you begin, ensure you have met the following requirements:
 
    The backend server will start on the port specified in the `.env` file (default is `3000`).
 
-### Frontend Running
+### Frontend
 
-1. **Start the frontend development server:**
+1. **Start the development server:**
 
    ```bash
    npm run dev
@@ -142,75 +159,43 @@ Before you begin, ensure you have met the following requirements:
 
 ## Building the Application
 
-### Backend Building
+### Backend
 
-1. **Navigate to the backend directory:**
+```bash
+cd backend
+npm run build
+```
 
-   ```bash
-   cd backend
-   ```
+- This compiles the TypeScript code into JavaScript and outputs it to the `dist` directory as specified in `tsconfig.node.json`.
 
-2. **Build the backend:**
+### Frontend
 
-   ```bash
-   npm run build
-   ```
+```bash
+cd frontend
+npm run build
+```
 
-   - This compiles the TypeScript code into JavaScript and outputs it to the `dist` directory as specified in `tsconfig.node.json`.
-
-### Frontend Building
-
-1. **Navigate to the frontend directory:**
-
-   ```bash
-   cd frontend
-   ```
-
-2. **Build the frontend:**
-
-   ```bash
-   npm run build
-   ```
-
-   - This bundles the frontend application for production.
+- This bundles the frontend application for production.
 
 ## Running Tests
 
 ### Backend Tests
 
-The backend uses **Jest** for testing.
+```bash
+cd backend
+npm test
+```
 
-1. **Navigate to the backend directory:**
-
-   ```bash
-   cd backend
-   ```
-
-2. **Run the tests:**
-
-   ```bash
-   npm test
-   ```
-
-   This will execute all tests located in the `backend` directory, including `server.test.ts`. The Node server will run on port 3000 by default, while the test server will run on port 3001.
+This will execute all tests located in the `backend` directory, including `server.test.ts`. The Node server will run on port 3000 by default, while the test server will run on port 3001.
 
 ### Frontend Tests
 
-The frontend also uses **Jest** for testing.
+```bash
+cd frontend
+npm test
+```
 
-1. **Navigate to the frontend directory:**
-
-   ```bash
-   cd frontend
-   ```
-
-2. **Run the tests:**
-
-   ```bash
-   npm test
-   ```
-
-   This will execute all frontend tests using Jest as the configured testing framework.
+This will execute all frontend tests using Jest as the configured testing framework.
 
 ## Project Structure
 
@@ -218,28 +203,29 @@ The frontend also uses **Jest** for testing.
 TOM/
 ├── backend/
 │   ├── src/
-│   │   ├── routes/
-│   │   │   └── authRoutes.ts
-│   │   ├── config/
-│   │   ├── models/
-│   │   ├── controllers/
-│   │   └── server.ts
-│   ├── package.json
-│   ├── tsconfig.node.json
-│   ├── jest.config.js
-│   └── ...other backend files
+│   │   ├── routes/        # API routes
+│   │   ├── services/      # Business logic
+│   │   ├── types/         # TypeScript type definitions
+│   │   └── __tests__/     # Test files
 ├── frontend/
 │   ├── src/
-│   │   ├── api/
-│   │   ├── views/
-│   │   └── ...other frontend files
-│   ├── package.json
-│   ├── tsconfig.json
-│   └── ...other frontend files
-├── .gitignore
-├── README.md
-└── ...other root files
+│   │   ├── assets/        # Static assets
+│   │   ├── components/    # Vue components
+│   │   ├── i18n/          # Internationalization
+│   │   ├── router/        # Vue Router configuration
+│   │   ├── services/      # API services
+│   │   ├── stores/        # Pinia stores
+│   │   ├── types/         # TypeScript type definitions
+│   │   └── views/         # Vue views/pages
 ```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
 ## License
 
