@@ -9,7 +9,8 @@
     "composite": true,
     "outDir": "./dist",
     "rootDir": "src",
-
+    "baseUrl": ".",
+    "esModuleInterop": true,
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": false,
@@ -17,13 +18,11 @@
     "moduleDetection": "force",
     "emitDeclarationOnly": true,
     "jsx": "preserve",
-
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-
     "paths": {
       "@/*": ["./src/*"]
     }
@@ -34,7 +33,8 @@
     "src/**/*.vue",
     "src/**/*.d.ts",
     "src/**/*.json",
-    "env.d.ts"
+    "env.d.ts",
+    "src/shims-vue.d.ts"
   ],
   "exclude": ["node_modules", "dist"]
 }
