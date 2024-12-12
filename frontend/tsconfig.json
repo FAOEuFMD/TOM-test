@@ -1,11 +1,7 @@
 {
   "files": [],
-  "references": [{ "path": "./tsconfig.app.json" }],
-  "compilerOptions": {
-    "composite": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["frontend/src/*"]
-    }
-  }
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.test.json" }
+  ]
 }

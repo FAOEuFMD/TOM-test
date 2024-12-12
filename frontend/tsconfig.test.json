@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "composite": true,
+    "esModuleInterop": true,
+    "types": ["jest", "node"],
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "moduleResolution": "node"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.json",
+    "src/**/__tests__/**/*"
+  ],
+  "exclude": ["node_modules"]
+}

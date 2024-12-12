@@ -3,8 +3,16 @@ export default {
   testEnvironment: "jsdom",
   moduleFileExtensions: ["js", "json", "vue", "ts"],
   transform: {
-    "^.+\\.vue$": "vue-jest",
-    "^.+\\.(ts|tsx)?$": "ts-jest",
+    "^.+\\.vue$": "@vue/vue3-jest",
+    "^.+\\.(ts|tsx)?$": [
+      "ts-jest",
+      {
+        tsconfig: "tsconfig.test.json",
+      },
+    ],
+  },
+  testEnvironmentOptions: {
+    customExportConditions: ["node", "node-addons"],
   },
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
