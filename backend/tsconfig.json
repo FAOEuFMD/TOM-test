@@ -1,11 +1,4 @@
 {
   "files": [],
-  "references": [{ "path": "./tsconfig.node.json" }],
-  "compilerOptions": {
-    "composite": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["backend/src/*"]
-    }
-  }
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
