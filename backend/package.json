@@ -2,13 +2,14 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "dist/server.js",
-  "type": "module",
   "scripts": {
     "test": "cross-env NODE_ENV=test jest",
     "start": "cross-env NODE_ENV=production node dist/server.js",
     "dev": "cross-env NODE_ENV=development nodemon",
     "build": "tsc --project tsconfig.node.json",
-    "prestart": "npm run build"
+    "prestart": "npm run build",
+    "db:export": "NODE_ENV=production ts-node -r dotenv/config src/scripts/exportDb.ts",
+    "db:import": "NODE_ENV=development ts-node -r dotenv/config src/scripts/importDb.ts"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
