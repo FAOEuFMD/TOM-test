@@ -77,14 +77,7 @@ cd TOM
 
 To configure the environment variables for the root, frontend, and backend, follow these steps:
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/FAOEuFMD/TOM.git
-cd TOM
-```
-
-### 2. Run the Environment Setup Script
+### 1. Run the Environment Setup Script
 
 The `setup-env.sh` script automates the process of copying `.env.example` files to `.env` files in the root, `backend`, and `frontend` directories, as well as setting up additional environments like `production` and `staging` if the example files exist.
 
@@ -139,7 +132,16 @@ After running the script, you'll have `.env`, `.env.production`, and `.env.stagi
   - `frontend/.env.production` _(if applicable)_
   - `frontend/.env.staging` _(if applicable)_
 
-### 4. Start the Application
+### 4. Maintaining the `.env.example` Files
+
+- **Keep `.env.example` Files Updated:**
+
+  - Regularly update the `.env.example` files to reflect any new environment variables added to the project. This ensures that developers have the latest configuration requirements.
+
+- **Backend `.env` Files (`backend/.env.*`):** Update database credentials, JWT secrets, and other backend-specific configurations.
+- **Frontend `.env` Files (`frontend/.env.*`):** Update API endpoints, environment-specific settings, and other frontend-specific configurations.
+
+### 5. Start the Application
 
 With the environment variables configured, you can now start the backend and frontend applications.
 
@@ -159,15 +161,6 @@ With the environment variables configured, you can now start the backend and fro
   npm start
   ```
 
-### 4. Configure Environment Variables
-
-- **Keep `.env.example` Files Updated:**
-
-  - Regularly update the `.env.example` files to reflect any new environment variables added to the project. This ensures that developers have the latest configuration requirements.
-
-- **Backend `.env` Files (`backend/.env.*`):** Update database credentials, JWT secrets, and other backend-specific configurations.
-- **Frontend `.env` Files (`frontend/.env.*`):** Update API endpoints, environment-specific settings, and other frontend-specific configurations.
-
 ### 5. Switching Between Environments
 
 Ensure that your application is set to use the correct `.env` file based on the environment. This is typically managed by setting the `NODE_ENV` variable when starting your application.
@@ -178,6 +171,12 @@ Ensure that your application is set to use the correct `.env` file based on the 
 
   ```bash
   NODE_ENV=development npm start
+  ```
+
+- **Staging:**
+
+  ```bash
+  NODE_ENV=staging npm start
   ```
 
 - **Production:**
