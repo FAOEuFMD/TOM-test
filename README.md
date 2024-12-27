@@ -147,7 +147,6 @@ With the environment variables configured, you can now start the backend and fro
 
   ```bash
   cd backend
-  npm install
   npm start
   ```
 
@@ -155,7 +154,6 @@ With the environment variables configured, you can now start the backend and fro
 
   ```bash
   cd frontend
-  npm install
   npm start
   ```
 
