@@ -134,12 +134,10 @@ After running the script, you'll have `.env`, `.env.production`, and `.env.stagi
 
 ### 4. Maintaining the `.env.example` Files
 
-- **Keep `.env.example` Files Updated:**
+Regularly update the `.env.example` files to reflect any new environment variables added to the project. This ensures that developers have the latest configuration requirements.
 
-  - Regularly update the `.env.example` files to reflect any new environment variables added to the project. This ensures that developers have the latest configuration requirements.
-
-- **Backend `.env` Files (`backend/.env.*`):** Update database credentials, JWT secrets, and other backend-specific configurations.
-- **Frontend `.env` Files (`frontend/.env.*`):** Update API endpoints, environment-specific settings, and other frontend-specific configurations.
+- **Backend `.env` Files (`backend/.env.*`):** Used for storing database credentials, JWT secrets, and other backend-specific configurations.
+- **Frontend `.env` Files (`frontend/.env.*`):** Used for storing API endpoints, environment-specific settings, and other frontend-specific configurations.
 
 ### 5. Start the Application
 
