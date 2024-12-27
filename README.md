@@ -79,7 +79,7 @@ To configure the environment variables for the root, frontend, and backend, foll
 
 ### 1. Run the Environment Setup Script
 
-The `setup-env.sh` script automates the process of copying `.env.example` files to `.env` files in the root, `backend`, and `frontend` directories, as well as setting up additional environments like `production` and `staging` if the example files exist.
+The `setup-env.sh` script automates the setup of environment configuration files for the development environment. It copies `.env.example` files to `.env` in the root, `backend`, and `frontend` directories. Additionally, it prepares `.env.production` and `.env.staging` files if their example files exist, ensuring readiness for different deployment stages.
 
 ```bash
 # Make the script executable (if not already done)
