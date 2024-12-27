@@ -27,9 +27,13 @@ dist-ssr
 *.tsbuildinfo
 
 # Environment variable files
-backend/.env.*
+backend/.env*
 frontend/.env*
 .env
+
+# Allow .env.example files
+!backend/.env.example
+!frontend/.env.example
 
 # Database dumps
 backend/database/dumps/*
