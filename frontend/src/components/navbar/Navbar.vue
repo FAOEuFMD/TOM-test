@@ -18,7 +18,7 @@ import { defineComponent } from "vue";
 import NavbarLogo from "../navbar/NavbarLogo.vue";
 import NavbarMenu from "../navbar/NavbarMenu.vue";
 import Header from "../Header.vue";
-import logoSrc from "@/assets/images/EuFMD_logo_white.png";
+import logoSrc from "@/assets/images/eufmd_logo_white.png";
 
 export default defineComponent({
   name: "Navbar",
@@ -40,8 +40,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-nav {
-  width: 100%;
-}
-</style>
+<style></style>
