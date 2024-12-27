@@ -60,10 +60,6 @@ cd TOM
    npm install
    ```
 
-3. **Set up the database:**
-   - Create a MySQL database
-   - Note the connection details in the `.env.example` file
-
 ### Frontend
 
 1. **Navigate to the frontend directory:**
