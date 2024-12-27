@@ -62,7 +62,7 @@ cd TOM
 
 3. **Set up the database:**
    - Create a MySQL database
-   - Note the connection details in the `.env.example` files
+   - Note the connection details in the `.env.example` file
 
 ### Frontend
 
@@ -79,35 +79,107 @@ cd TOM
 
 ## Environment Setup
 
-Copy the example environment files and update them with your configuration:
+Create an environment file for each of the different environments and copy the contents of the `.env.example` files in the root directory and the `frontend` and `backend` folders.
 
-1. Root directory:
+### 1. Development Environment
 
-   ```bash
-   cp .env.example .env
-   ```
+#### Root Directory
 
-2. Backend directory:
+```bash
+cp .env.example .env
+```
 
-   ```bash
-   cp backend/.env.example backend/.env
-   ```
+#### Backend Directory
 
-3. Frontend directory:
-   ```bash
-   cp frontend/.env.example frontend/.env
-   ```
+```bash
+cp backend/.env.example backend/.env
+```
 
-Update each `.env` file with your specific configuration values.
+#### Frontend Directory
+
+```bash
+cp frontend/.env.example frontend/.env
+```
+
+### 2. Production Environment
+
+#### Root Directory
+
+```bash
+cp .env.example .env.production
+```
+
+#### Backend Directory
+
+```bash
+cp backend/.env.example backend/.env.production
+```
+
+#### Frontend Directory
+
+```bash
+cp frontend/.env.example frontend/.env.production
+```
+
+### 3. Additional Environments
+
+If you have other environments (e.g., staging, testing), follow the same pattern to create corresponding `.env` files:
+
+#### Example for Staging Environment
+
+##### Root Directory
+
+```bash
+cp .env.example .env.staging
+```
+
+##### Backend Directory
+
+```bash
+cp backend/.env.example backend/.env.staging
+```
+
+##### Frontend Directory
+
+```bash
+cp frontend/.env.example frontend/.env.staging
+```
+
+### 4. Configure Environment Variables
+
+After copying the `.env.example` files, update each `.env.*` file with your specific configuration values for the respective environment.
+
+- **Backend `.env` Files (`backend/.env.*`):** Update database credentials, JWT secrets, and other backend-specific configurations.
+- **Frontend `.env` Files (`frontend/.env.*`):** Update API endpoints, environment-specific settings, and other frontend-specific configurations.
+
+### 5. Switching Between Environments
+
+Ensure that your application is set to use the correct `.env` file based on the environment. This is typically managed by setting the `NODE_ENV` variable when starting your application.
+
+#### Example:
+
+- **Development:**
+
+  ```bash
+  NODE_ENV=development npm start
+  ```
+
+- **Production:**
+
+  ```bash
+  NODE_ENV=production npm start
+  ```
+
+## Summary
+
+By organizing your environment configurations into separate `.env` files for each environment, you ensure a clear and maintainable setup. This approach enhances security and makes it easier to manage environment-specific settings.
+
+If you have any further questions or need additional assistance, feel free to ask!
 
 ### Database Setup
 
 1. **Creating a dump from production:**
 
-   - Copy the production environment example file:
-     ```bash
-     cp .env.production.example .env.production
-     ```
    - Update `.env.production` with your production database credentials:
      ```
      DATABASE_HOST=database.example.com
