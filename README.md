@@ -75,7 +75,7 @@ cd TOM
 
 ## Environment Setup
 
-Create an environment file for each of the different environments and copy the contents of the `.env.example` files in the root directory and the `frontend` and `backend` folders.
+Create an environment file for each of the different environments and copy the contents of the `.env.example` files in the `frontend` and `backend` folders as well as the root directory.
 
 ### 1. Development Environment
 
