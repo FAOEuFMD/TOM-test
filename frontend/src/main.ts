@@ -14,8 +14,8 @@ app.use(router);
 app.use(pinia);
 app.use(i18n);
 
-if (!import.meta.env.VITE_API_URL) {
-  throw new Error("VITE_API_URL is not defined in the environment variables.");
+if (!import.meta.env.VITE_BACKEND_URL) {
+  throw new Error("VITE_BACKEND_URL not found in any environment variables.");
 }
 
 app.mount("#app");
