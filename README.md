@@ -75,75 +75,95 @@ cd TOM
 
 ## Environment Setup
 
-Create an environment file for each of the different environments and copy the contents of the `.env.example` files in the `frontend` and `backend` folders as well as the root directory.
+To configure the environment variables for the root, frontend, and backend, follow these steps:
 
-### 1. Development Environment
-
-#### Root Directory
+### 1. Clone the Repository
 
 ```bash
-cp .env.example .env
+git clone https://github.com/FAOEuFMD/TOM.git
+cd TOM
 ```
 
-#### Backend Directory
+### 2. Run the Environment Setup Script
+
+The `setup-env.sh` script automates the process of copying `.env.example` files to `.env` files in the root, `backend`, and `frontend` directories, as well as setting up additional environments like `production` and `staging` if the example files exist.
 
 ```bash
-cp backend/.env.example backend/.env
+# Make the script executable (if not already done)
+chmod +x setup-env.sh
+
+# Execute the script
+./setup-env.sh
 ```
 
-#### Frontend Directory
+**Example Output:**
 
-```bash
-cp frontend/.env.example frontend/.env
+```
+🔧 Starting environment setup...
+📂 Processing root directory...
+✅ Copied .env.example to .env.
+✅ Copied .env.production.example to .env.production.
+✅ Copied .env.staging.example to .env.staging.
+
+📂 Processing backend directory...
+✅ Copied backend/.env.example to backend/.env.
+✅ Copied backend/.env.production.example to backend/.env.production.
+✅ Copied backend/.env.staging.example to backend/.env.staging.
+
+📂 Processing frontend directory...
+✅ Copied frontend/.env.example to frontend/.env.
+✅ Copied frontend/.env.production.example to frontend/.env.production.
+⚠️ Source file frontend/.env.staging.example does not exist. Skipping...
+
+🎉 Environment setup complete. Please review and update the .env files with your specific configurations.
 ```
 
-### 2. Production Environment
+### 3. Update the `.env` Files
 
-#### Root Directory
+After running the script, you'll have `.env`, `.env.production`, and `.env.staging` files in the root, `backend`, and `frontend` directories (if the example files exist). Open each file and replace the placeholder values with your specific configuration details.
 
-```bash
-cp .env.example .env.production
-```
+- **Root:**
 
-#### Backend Directory
+  - `./.env`
+  - `./.env.production` _(if applicable)_
+  - `./.env.staging` _(if applicable)_
 
-```bash
-cp backend/.env.example backend/.env.production
-```
+- **Backend:**
 
-#### Frontend Directory
+  - `backend/.env`
+  - `backend/.env.production` _(if applicable)_
+  - `backend/.env.staging` _(if applicable)_
 
-```bash
-cp frontend/.env.example frontend/.env.production
-```
+- **Frontend:**
+  - `frontend/.env`
+  - `frontend/.env.production` _(if applicable)_
+  - `frontend/.env.staging` _(if applicable)_
 
-### 3. Additional Environments
+### 4. Start the Application
 
-If you have other environments (e.g., staging, testing), follow the same pattern to create corresponding `.env` files:
+With the environment variables configured, you can now start the backend and frontend applications.
 
-#### Example for Staging Environment
+- **Backend:**
 
-##### Root Directory
+  ```bash
+  cd backend
+  npm install
+  npm start
+  ```
 
-```bash
-cp .env.example .env.staging
-```
+- **Frontend:**
 
-##### Backend Directory
-
-```bash
-cp backend/.env.example backend/.env.staging
-```
-
-##### Frontend Directory
-
-```bash
-cp frontend/.env.example frontend/.env.staging
-```
+  ```bash
+  cd frontend
+  npm install
+  npm start
+  ```
 
 ### 4. Configure Environment Variables
 
-After copying the `.env.example` files, update each `.env.*` file with your specific configuration values for the respective environment.
+- **Keep `.env.example` Files Updated:**
+
+  - Regularly update the `.env.example` files to reflect any new environment variables added to the project. This ensures that developers have the latest configuration requirements.
 
 - **Backend `.env` Files (`backend/.env.*`):** Update database credentials, JWT secrets, and other backend-specific configurations.
 - **Frontend `.env` Files (`frontend/.env.*`):** Update API endpoints, environment-specific settings, and other frontend-specific configurations.
@@ -165,12 +185,6 @@ Ensure that your application is set to use the correct `.env` file based on the 
   ```bash
   NODE_ENV=production npm start
   ```
-
-## Summary
-
-By organizing your environment configurations into separate `.env` files for each environment, you ensure a clear and maintainable setup. This approach enhances security and makes it easier to manage environment-specific settings.
-
-If you have any further questions or need additional assistance, feel free to ask!
 
 ### Database Setup
 
