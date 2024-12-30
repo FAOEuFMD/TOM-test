@@ -1,7 +1,7 @@
 import type { User } from "@/types/user";
 
 export async function login(email: string, password: string): Promise<User> {
-  const url = `${import.meta.env.VITE_API_URL}/auth/login`;
+  const url = `${import.meta.env.VITE_BACKEND_URL}/auth/login`;
 
   try {
     const response = await fetch(url, {
