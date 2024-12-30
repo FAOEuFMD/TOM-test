@@ -7,10 +7,14 @@ import healthRoutes from "./routes/healthRoutes";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Basic middleware
+// Middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://127.0.0.1:5173"],
+    origin: [
+      "http://localhost:5173",
+      "http://127.0.0.1:5173",
+      "https://eufmd-tom.onrender.com",
+    ],
     credentials: true,
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
