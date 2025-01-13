@@ -12,11 +12,11 @@
 - [Environment Setup](#environment-setup)
   - [Database Setup](#database-setup)
 - [Running the Application](#running-the-application)
-  - [Backend Running](#backend-running)
-  - [Frontend Running](#frontend-running)
+  - [Backend](#backend)
+  - [Frontend](#frontend)
 - [Building the Application](#building-the-application)
-  - [Backend Building](#backend-building)
-  - [Frontend Building](#frontend-building)
+  - [Backend](#backend)
+  - [Frontend](#frontend)
 - [Running Tests](#running-tests)
   - [Backend Tests](#backend-tests)
   - [Frontend Tests](#frontend-tests)
@@ -111,7 +111,7 @@ chmod +x setup-env.sh
 🎉 Environment setup complete. Please review and update the .env files with your specific configurations.
 ```
 
-### 3. Update the `.env` Files
+### 2. Update the `.env` Files
 
 After running the script, you'll have `.env`, `.env.production`, and `.env.staging` files in the root, `backend`, and `frontend` directories (if the example files exist). Open each file and replace the placeholder values with your specific configuration details.
 
@@ -132,32 +132,7 @@ After running the script, you'll have `.env`, `.env.production`, and `.env.stagi
   - `frontend/.env.production` _(if applicable)_
   - `frontend/.env.staging` _(if applicable)_
 
-### 4. Maintaining the `.env.example` Files
-
-Regularly update the `.env.example` files to reflect any new environment variables added to the project. This ensures that developers have the latest configuration requirements.
-
-- **Backend `.env` Files (`backend/.env.*`):** Used for storing database credentials, JWT secrets, and other backend-specific configurations.
-- **Frontend `.env` Files (`frontend/.env.*`):** Used for storing API endpoints, environment-specific settings, and other frontend-specific configurations.
-
-### 5. Start the Application
-
-With the environment variables configured, you can now start the backend and frontend applications.
-
-- **Backend:**
-
-  ```bash
-  cd backend
-  npm start
-  ```
-
-- **Frontend:**
-
-  ```bash
-  cd frontend
-  npm start
-  ```
-
-### 5. Switching Between Environments
+### 3. Switching Between Environments
 
 Ensure that your application is set to use the correct `.env` file based on the environment. This is typically managed by setting the `NODE_ENV` variable when starting your application.
 
@@ -166,7 +141,7 @@ Ensure that your application is set to use the correct `.env` file based on the 
 - **Development:**
 
   ```bash
-  NODE_ENV=development npm start
+  NODE_ENV=development npm run dev
   ```
 
 - **Staging:**
@@ -180,6 +155,13 @@ Ensure that your application is set to use the correct `.env` file based on the 
   ```bash
   NODE_ENV=production npm start
   ```
+
+### 4. Maintaining the `.env.example` Files
+
+Regularly update the `.env.example` files to reflect any new environment variables added to the project. This ensures that developers have the latest configuration requirements.
+
+- **Backend `.env` Files (`backend/.env.*`):** Used for storing database credentials, JWT secrets, and other backend-specific configurations.
+- **Frontend `.env` Files (`frontend/.env.*`):** Used for storing API endpoints, environment-specific settings, and other frontend-specific configurations.
 
 ### Database Setup
 
@@ -232,7 +214,13 @@ Note: Keep your `.env.production` file secure and never commit it to version con
    npm run dev
    ```
 
-   The frontend application will start on `http://localhost:5173` by default and communicate with the backend API.
+2. **Start in production mode:**
+
+   ```bash
+   npm start
+   ```
+
+   The frontend application will start on `http://localhost:5173` by default and communicate with the backend server.
 
 ## Building the Application
 
