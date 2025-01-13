@@ -198,7 +198,7 @@ Note: Keep your `.env.production` file secure and never commit it to version con
    npm run dev
    ```
 
-   The backend server will start on the port specified in the `.env` file (default is `3000`).
+- The backend server will start on the port specified in the `.env` file (default is `3000`).
 
 ### Frontend
 
@@ -208,7 +208,7 @@ Note: Keep your `.env.production` file secure and never commit it to version con
    npm run dev
    ```
 
-   The frontend application will start on `http://localhost:5173` by default and communicate with the backend server.
+- The frontend application will start on `http://localhost:5173` by default and communicate with the backend server.
 
 ## Building the Application
 
@@ -256,7 +256,7 @@ cd backend
 npm test
 ```
 
-This will execute all tests located in the `backend` directory, including `server.test.ts`. The Node server will run on port 3000 by default, while the test server will run on port 3001.
+- This will execute all tests located in the `backend` directory, including `server.test.ts`. The Node server will run on port 3000 by default, while the test server will run on port 3001.
 
 ### Frontend Tests
 
@@ -265,7 +265,7 @@ cd frontend
 npm test
 ```
 
-This will execute all frontend tests using Jest as the configured testing framework.
+- This will execute all frontend tests using Jest as the configured testing framework.
 
 ## Project Structure
 
