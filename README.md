@@ -198,12 +198,6 @@ Note: Keep your `.env.production` file secure and never commit it to version con
    npm run dev
    ```
 
-2. **Start in production mode:**
-
-   ```bash
-   npm start
-   ```
-
    The backend server will start on the port specified in the `.env` file (default is `3000`).
 
 ### Frontend
@@ -214,26 +208,29 @@ Note: Keep your `.env.production` file secure and never commit it to version con
    npm run dev
    ```
 
-2. **Start in production mode:**
-
-   ```bash
-   npm start
-   ```
-
    The frontend application will start on `http://localhost:5173` by default and communicate with the backend server.
 
 ## Building the Application
 
-### Backend
+1. **Build the backend application:**
 
 ```bash
-cd backend
-npm run build
+   cd backend
+   npm run build
 ```
 
 - This compiles the TypeScript code into JavaScript and outputs it to the `dist` directory as specified in `tsconfig.node.json`.
 
+2. **Start in production mode:**
+
+```bash
+   cd backend
+   npm start
+```
+
 ### Frontend
+
+1. **Build the frontend application:**
 
 ```bash
 cd frontend
@@ -241,6 +238,14 @@ npm run build
 ```
 
 - This bundles the frontend application for production.
+
+2. **Start in Vite preview mode:**
+
+   ```bash
+   npm run serve
+   ```
+
+– This uses Vite's preview mode to serve the built frontend application.
 
 ## Running Tests
 
