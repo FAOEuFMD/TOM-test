@@ -228,6 +228,8 @@ Note: Keep your `.env.production` file secure and never commit it to version con
    npm start
 ```
 
+- This starts the backend server in production mode.
+
 ### Frontend
 
 1. **Build the frontend application:**
