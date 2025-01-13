@@ -245,7 +245,7 @@ npm run build
    npm run serve
    ```
 
-– This uses Vite's preview mode to serve the built frontend application.
+- This uses Vite's preview mode to serve the built frontend application.
 
 ## Running Tests
 
