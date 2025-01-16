@@ -80,7 +80,7 @@ cd TOM
 - Deployed independently as a static site.
 - Talks to the backend via API calls.
 
-  **Backend (Node.js):**
+**Backend (Node.js):**
 
 - Deployed separately, likely handling business logic and API endpoints.
 - Serves data to the frontend or other clients.
