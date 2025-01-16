@@ -73,6 +73,23 @@ cd TOM
    npm install
    ```
 
+### Understanding the Architecture:
+
+**Frontend (Vue + Vite):**
+
+- Deployed independently as a static site.
+- Talks to the backend via API calls.
+
+**Backend (Node.js):**
+
+- Deployed separately, likely handling business logic and API endpoints.
+- Serves data to the frontend or other clients.
+
+  This setup is called a separation of concerns between frontend and backend, but it's still essentially a two-tiered architecture:
+
+1. Frontend handles the user interface.
+2. Backend handles the logic and data.
+
 ## Environment Setup
 
 To configure the environment variables for the root, frontend, and backend, follow these steps:
