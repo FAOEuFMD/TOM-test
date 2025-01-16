@@ -87,8 +87,8 @@ cd TOM
 
   This setup is called a separation of concerns between frontend and backend, but it's still essentially a two-tiered architecture:
 
-1. Frontend handles the user interface.
-2. Backend handles the logic and data.
+  1. Frontend handles the user interface.
+  2. Backend handles the logic and data.
 
 ## Environment Setup
 
